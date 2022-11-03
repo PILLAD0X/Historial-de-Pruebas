@@ -1,0 +1,102 @@
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\appsettings.json
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\API-HistorialPruebas.exe
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\API-HistorialPruebas.deps.json
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\API-HistorialPruebas.runtimeconfig.json
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\API-HistorialPruebas.dll
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\API-HistorialPruebas.pdb
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\Dapper.dll
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.csproj.AssemblyReference.cache
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.AssemblyInfoInputs.cache
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.AssemblyInfo.cs
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.csproj.CoreCompileInputs.cache
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\scopedcss\bundle\API-HistorialPruebas.styles.css
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.csproj.CopyComplete
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.dll
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\refint\API-HistorialPruebas.dll
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.pdb
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.genruntimeconfig.cache
+C:\Users\jp1052000\source\repos\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\ref\API-HistorialPruebas.dll
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\appsettings.Development.json
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\appsettings.json
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\API-HistorialPruebas.exe
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\API-HistorialPruebas.deps.json
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\API-HistorialPruebas.runtimeconfig.json
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\API-HistorialPruebas.dll
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\API-HistorialPruebas.pdb
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\Dapper.dll
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.csproj.AssemblyReference.cache
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.AssemblyInfoInputs.cache
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.AssemblyInfo.cs
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.csproj.CoreCompileInputs.cache
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.MvcApplicationPartsAssemblyInfo.cs
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.MvcApplicationPartsAssemblyInfo.cache
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\staticwebassets.build.json
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\staticwebassets.development.json
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\scopedcss\bundle\API-HistorialPruebas.styles.css
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.csproj.CopyComplete
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.dll
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\refint\API-HistorialPruebas.dll
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.pdb
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.genruntimeconfig.cache
+C:\Desarrollo\Historial de Pruebas\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\ref\API-HistorialPruebas.dll
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\appsettings.Development.json
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\appsettings.json
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\API-HistorialPruebas.exe
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\API-HistorialPruebas.deps.json
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\API-HistorialPruebas.runtimeconfig.json
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\API-HistorialPruebas.dll
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\API-HistorialPruebas.pdb
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\Dapper.dll
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.csproj.AssemblyReference.cache
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.AssemblyInfoInputs.cache
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.AssemblyInfo.cs
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.csproj.CoreCompileInputs.cache
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.MvcApplicationPartsAssemblyInfo.cs
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.MvcApplicationPartsAssemblyInfo.cache
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\staticwebassets.build.json
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\staticwebassets.development.json
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\scopedcss\bundle\API-HistorialPruebas.styles.css
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.csproj.CopyComplete
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.dll
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\refint\API-HistorialPruebas.dll
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.pdb
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\API-HistorialPruebas.genruntimeconfig.cache
+C:\Desarrollo\Historial de Pruebas V1\Code\API-HistorialPruebas\API-HistorialPruebas\obj\Debug\net6.0\ref\API-HistorialPruebas.dll

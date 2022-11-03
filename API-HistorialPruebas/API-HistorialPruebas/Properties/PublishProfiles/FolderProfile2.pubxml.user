@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Desarrollo\Historial de Pruebas\Deploy\API-Historial-Pruebas</_PublishTargetUrl>
+    <History>True|2022-08-31T23:26:23.5120462Z;True|2022-08-26T00:55:16.2609989-07:00;</History>
+  </PropertyGroup>
+</Project>
