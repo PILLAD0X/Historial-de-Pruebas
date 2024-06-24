@@ -5,7 +5,7 @@ using API_HistorialPruebas.Models;
  
 namespace API_HistorialPruebas.Controllers
 {
-  /*  [Route("api/GMSeries")]
+   [Route("api/GMSeries")]
     [ApiController]
     public class GMBarcodeController : Controller
     {
@@ -14,8 +14,8 @@ namespace API_HistorialPruebas.Controllers
         {
             _config = config;
         }
-        [HttpGet("{ProductSerial}")]
-        public async Task<ActionResult<TesterLogInformation>> GetGMSeries(string ProductSerial)
+        [HttpGet("{serialNumber}")]
+        public async Task<ActionResult<TesterLogInformation>> GetGMSeries(string serialNumber)
         {
             try
             {
@@ -24,8 +24,8 @@ namespace API_HistorialPruebas.Controllers
 
                 connection.Open();
                     var GMSeries = await connection.QueryAsync<GMBarcode>
-                        ("EXEC [dbo].[getGMSerial] @numSerieGM = @ProductSerial",
-                            new { ProductSerial = ProductSerial }, commandTimeout: 300000);
+                        ("EXEC [dbo].[getGM1523serials] @serialNumber = @serialNumber",
+                            new { serialNumber = serialNumber }, commandTimeout: 300000);
 
                     if (GMSeries.Count() == 0)
                     {
@@ -40,5 +40,5 @@ namespace API_HistorialPruebas.Controllers
                 return BadRequest(e.Message);
             }
         }
-    }*/
+    }
 }

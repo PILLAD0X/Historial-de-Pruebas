@@ -6,16 +6,16 @@ import * as FaIcons from 'react-icons/fa';
 const ParentChild = (props)=> {
     return(
         <div className='divpropiedades'>
-        { props.datos === 'No se encontro una relacion entre Parent y Child' ?
-         <h3><FaIcons.FaExclamationTriangle/> No se encontro relacion Parent - Child en Genie</h3>       
+        { props.datos === 'No se encontro una relacion entre Parent y Child' ? 
+         <h3><FaIcons.FaExclamationTriangle/> Could not get an amplifier relationship</h3>       
         :
 
-        <p className='lbspropiedades propiedadesT'><FaIcons.FaDatabase/> Genie</p>
+        <p className='lbspropiedades propiedadesT'><FaIcons.FaDatabase/> AmpRelation:</p>
         }
         { props.datos === 'No se encontro una relacion entre Parent y Child'  ?
             <h6> </h6>
         :
-            <p className='lbspropiedades propiedadesT'>Parent:</p>
+            <p className='lbspropiedades propiedadesT'>Amplifier:</p>
         }
         { props.datos === 'No se encontro una relacion entre Parent y Child'  ?
             <h6> </h6>
@@ -25,7 +25,7 @@ const ParentChild = (props)=> {
         { props.datos === 'No se encontro una relacion entre Parent y Child'  ?
             <h6> </h6>
         :
-            <p className='lbspropiedades propiedadesT'>Child: </p>
+            <p className='lbspropiedades propiedadesT'>PCB: </p>
         }
          { props.datos === 'No se encontro una relacion entre Parent y Child'  ?
             <h6> </h6>

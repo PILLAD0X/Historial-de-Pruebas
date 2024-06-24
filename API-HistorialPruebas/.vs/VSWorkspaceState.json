@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\API-HistorialPruebas",
-    "\\API-HistorialPruebas\\Controllers"
+    "\\API-HistorialPruebas\\Controllers",
+    "\\API-HistorialPruebas\\Models"
   ],
-  "SelectedNode": "\\API-HistorialPruebas.sln",
+  "SelectedNode": "\\API-HistorialPruebas\\Controllers\\TesterLogInformationController.cs",
   "PreviewInSolutionExplorer": false
 }

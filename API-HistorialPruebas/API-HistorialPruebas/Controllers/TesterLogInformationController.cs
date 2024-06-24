@@ -16,8 +16,8 @@ namespace API_HistorialPruebas.Controllers
          {
              _config = config;
          }
-         [HttpGet("{ProductSerial}")]
-         public async Task<ActionResult<TesterLogInformation>> GetTestHistory(string ProductSerial, int MfgYear)
+         [HttpGet("{serialNumber}")]
+         public async Task<ActionResult<TesterLogInformation>> GetTestHistory(string serialNumber, int MfgYear)
          {
             try
             {  
@@ -26,8 +26,8 @@ namespace API_HistorialPruebas.Controllers
 
                 connection.Open();
                     var testHistory = await connection.QueryAsync<TesterLogInformation>
-                        ("EXEC [dbo].[getTestHistory] @numSerie = @ProductSerial, @year = @MfgYear ",
-                            new { ProductSerial = ProductSerial, MfgYear = MfgYear }, commandTimeout: 300000);
+                        ("EXEC [dbo].[getTestHistory] @numSerie = @serialNumber, @year = @MfgYear ",
+                            new { serialNumber = serialNumber, MfgYear = MfgYear }, commandTimeout: 300000);
 
                     if (testHistory.Count() == 0)
                     {

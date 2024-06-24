@@ -1,30 +1,32 @@
 ﻿using API_HistorialPruebas.Models;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 namespace API_HistorialPruebas.Controllers
-{ 
+{
     public class ParseoCodigo
     {
-        public string ParsearCodigo( string barcode)
+        public string ParsearCodigo(string barcode)
         {
-            if (barcode.Length == 15) {
+            if (barcode.Length == 15)
+            {
 
                 return barcode;
 
             }
-            else if(barcode.Length == 23)
+            else if (barcode.Length == 23)
             {
                 return barcode;
             }
-            else if(barcode.Length == 36)
+            else if (barcode.Length == 36)
             {
                 string code36ParseTo23 = barcode.Substring(12, 24);
                 return code36ParseTo23;
             }
             else if (barcode.Length == 43)
             {
-                string code43ParseTo23 = barcode.Substring(20,23);
+                string code43ParseTo23 = barcode.Substring(20, 23);
                 return code43ParseTo23;
             }
             else if (barcode.Length == 45)
@@ -42,13 +44,13 @@ namespace API_HistorialPruebas.Controllers
                 string Plant = "F";
                 string YEARandJulianD = barcode.Substring(45, 4);
                 string Sequense = barcode.Substring(51, 4);
-                string Hour = ConvertNumberToAlphabet(barcode.Substring(55,2));
+                string Hour = ConvertNumberToAlphabet(barcode.Substring(55, 2));
                 string ProductionLine = barcode.Substring(57, 1);
                 string BosePN = barcode.Substring(60, 6);
                 string Revision = "00";
                 string ProductionRevision = barcode.Substring(66, 2);
                 string PartVariation = barcode.Substring(68, 2);
-                string GMCode23 = Plant+YEARandJulianD+Sequense+Hour+ProductionLine+BosePN+Revision+ProductionRevision+PartVariation;
+                string GMCode23 = Plant + YEARandJulianD + Sequense + Hour + ProductionLine + BosePN + Revision + ProductionRevision + PartVariation;
                 var GMBarcodeData = new GMBarcode
                 {
                     code15 = ConvertGM70CodeTo15(barcode),
@@ -63,9 +65,9 @@ namespace API_HistorialPruebas.Controllers
             {
                 return "El codigo ingresado no cumple con la longitud estandar, la logitud estandar permitida para las series es: 15, 23, 36, 43, 45, 55, 70";
             }
-            
+
         }
-    
+
         private string ConvertNumberToAlphabet(string number)
         {
             switch (number)
@@ -149,7 +151,7 @@ namespace API_HistorialPruebas.Controllers
                     number = "Z";
                     break;
             }
-            return number; 
+            return number;
         }
 
         private string ConvertGM70CodeTo15(string GMCode70)
@@ -158,7 +160,7 @@ namespace API_HistorialPruebas.Controllers
             string Revision = "00";
             string PartVariation = GMCode70.Substring(68, 2);
             string Sequense = GMCode70.Substring(50, 5);
-            string GM15Code = BosePN+Revision+PartVariation+Sequense;
+            string GM15Code = BosePN + Revision + PartVariation + Sequense;
             return GM15Code;
         }
 
@@ -175,5 +177,6 @@ namespace API_HistorialPruebas.Controllers
             }
         }
     }
+
 }
 //BY:Julio Pillado.

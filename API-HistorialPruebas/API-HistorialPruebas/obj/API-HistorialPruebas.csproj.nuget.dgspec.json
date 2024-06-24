@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Desarrollo\\Historial de Pruebas V1\\Code\\API-HistorialPruebas\\API-HistorialPruebas\\API-HistorialPruebas.csproj": {}
+    "C:\\temp\\Desarrollo\\Desarrollo\\Historial-de-Pruebas\\API-HistorialPruebas\\API-HistorialPruebas\\API-HistorialPruebas.csproj": {}
   },
   "projects": {
-    "C:\\Desarrollo\\Historial de Pruebas V1\\Code\\API-HistorialPruebas\\API-HistorialPruebas\\API-HistorialPruebas.csproj": {
+    "C:\\temp\\Desarrollo\\Desarrollo\\Historial-de-Pruebas\\API-HistorialPruebas\\API-HistorialPruebas\\API-HistorialPruebas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Desarrollo\\Historial de Pruebas V1\\Code\\API-HistorialPruebas\\API-HistorialPruebas\\API-HistorialPruebas.csproj",
+        "projectUniqueName": "C:\\temp\\Desarrollo\\Desarrollo\\Historial-de-Pruebas\\API-HistorialPruebas\\API-HistorialPruebas\\API-HistorialPruebas.csproj",
         "projectName": "API-HistorialPruebas",
-        "projectPath": "C:\\Desarrollo\\Historial de Pruebas V1\\Code\\API-HistorialPruebas\\API-HistorialPruebas\\API-HistorialPruebas.csproj",
-        "packagesPath": "C:\\Users\\jp1052000\\.nuget\\packages\\",
-        "outputPath": "C:\\Desarrollo\\Historial de Pruebas V1\\Code\\API-HistorialPruebas\\API-HistorialPruebas\\obj\\",
+        "projectPath": "C:\\temp\\Desarrollo\\Desarrollo\\Historial-de-Pruebas\\API-HistorialPruebas\\API-HistorialPruebas\\API-HistorialPruebas.csproj",
+        "packagesPath": "C:\\Users\\JP1052000\\.nuget\\packages\\",
+        "outputPath": "C:\\temp\\Desarrollo\\Desarrollo\\Historial-de-Pruebas\\API-HistorialPruebas\\API-HistorialPruebas\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\jp1052000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\JP1052000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -42,15 +51,19 @@
           "dependencies": {
             "Dapper": {
               "target": "Package",
-              "version": "[2.0.123, )"
+              "version": "[2.1.35, )"
+            },
+            "Microsoft.AspNet.Cors": {
+              "target": "Package",
+              "version": "[5.3.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.6.1, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
-              "version": "[4.8.3, )"
+              "version": "[4.8.6, )"
             }
           },
           "imports": [
@@ -64,6 +77,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -72,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }
