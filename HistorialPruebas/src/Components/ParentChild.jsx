@@ -7,7 +7,7 @@ const ParentChild = (props)=> {
     return(
         <div className='divpropiedades'>
         { props.datos === 'No se encontro una relacion entre Parent y Child' ? 
-         <h3><FaIcons.FaExclamationTriangle/> Could not get an amplifier relationship</h3>       
+         <h3><FaIcons.FaExclamationTriangle/>No se encontro una relacion PCB - amplificador para la serie buscada</h3>       
         :
 
         <p className='lbspropiedades propiedadesT'><FaIcons.FaDatabase/> AmpRelation:</p>

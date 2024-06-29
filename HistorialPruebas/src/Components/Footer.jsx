@@ -7,7 +7,7 @@ const Footer = (props)=> {
         <div className="divFooter">
             
             <div>
-            <p className="textoFooter">© Bose Corporation 2022, MEIS.</p>
+            <p className="textoFooter">MEIS 2024</p>
             </div>
                 
             

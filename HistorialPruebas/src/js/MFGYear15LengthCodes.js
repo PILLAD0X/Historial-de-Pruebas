@@ -4,7 +4,7 @@ const Swal = require('sweetalert2');
 const getCurrentYear = () => new Date().getFullYear();
 
 const generateYearOptions = () => {
-  const startYear = 2012;
+  const startYear = 2018;
   const currentYear = getCurrentYear();
   const yearOptions = {};
 
@@ -17,12 +17,12 @@ const generateYearOptions = () => {
 
 const getMFGYear15LengthCodes = async () => {
   const { value: MfgYears } = await Swal.fire({
-    title: "Select Manufacturing Year",
+    title: "Seleccione año de Manufactura",
     input: "select",
     inputOptions: {
       Years: generateYearOptions()
     },
-    inputPlaceholder: "Select a year",
+    inputPlaceholder: "Seleccione año",
     showCancelButton: true
   });
   

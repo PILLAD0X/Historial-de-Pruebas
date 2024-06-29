@@ -12,8 +12,8 @@ import DetalleCodigo from "../Components/DetalleCodigo";
 import IconLimpiar from "../icons/IconLimpiar";
 
 // nuevos imports en el proceso de modularizacion
-import { getParentChild} from "../js/apiCalls";
-import {getLoadingFAData,getLoadingPCBData,setLoadingFAData,setLoadingPCBData} from '../js/loadingState'
+import { MainExecution} from "../js/MainExecution";
+import {useLoading} from '../js/LoadingContext'
 
 const Home = () => {
   //VARIBALES PARA exportar a excel
@@ -21,12 +21,14 @@ const Home = () => {
   const [pruebasFA, setPruebasFA] = useState([]);
   const [pruebasCodigoNoIdentif, setPruebasCodigoNoIdentif] = useState([]);
   const [parentChild, setParentChild] = useState([]); //variable donde recibimos la relacion de parent y child
+  
   const [mfgYear, setMfgYear] = useState([""]);
   const [detalle70Barcode, setdetalle70Barcode] = useState([]); // variable para el desglose de la conversion a series de 70, 23, 15.
   const txtSerialNumber = useRef(); //variable para tomar lo escrito en el input de la serie
-  
+  const { loadingPCB, setLoadingPCB, loadingFA, setLoadingFA  } = useLoading();
+
   const handleGetParetChild = (serialNumber) => {
-    getParentChild(serialNumber, setParentChild, setMfgYear, setdetalle70Barcode, setPruebasCodigoNoIdentif,setPruebasFA, setPruebasPCB);    
+    MainExecution(serialNumber, setParentChild, parentChild, setMfgYear, setdetalle70Barcode, setPruebasCodigoNoIdentif,setPruebasFA, setPruebasPCB, setLoadingPCB, setLoadingFA);    
   };  
   
   // metodo llamado que desencadena la ejecucion
@@ -36,8 +38,8 @@ const Home = () => {
     if (serialNumber !== "" && serialNumber !== null) {
       //confirm that all components are in default status and assign the load icons as working
       limpiarPantalla();
-      setLoadingPCBData(true);
-      setLoadingFAData(true);
+      setLoadingPCB(true);
+      setLoadingFA(true);
       handleGetParetChild(serialNumber);
     }else {
       // cuando se recibe un valor vacio.
@@ -57,8 +59,8 @@ const Home = () => {
     setPruebasCodigoNoIdentif([]);
     setParentChild([]);
     setdetalle70Barcode([]);
-    setLoadingPCBData(false);
-    setLoadingFAData(false);
+    setLoadingPCB(false);
+    setLoadingFA(false);
     setMfgYear("");
     txtSerialNumber.current.value = "";
     txtSerialNumber.current.focus();
@@ -80,7 +82,7 @@ const Home = () => {
     } else {
     }
     if (pruebasCodigoNoIdentif.length > 0) {
-      XLSX.utils.book_append_sheet(wb, ws3, "Tests without realtion parent-child");
+      XLSX.utils.book_append_sheet(wb, ws3, "Tests without AmpRelation");
     } else {
     }
 
@@ -157,7 +159,7 @@ const Home = () => {
 
   
 
-      {getLoadingPCBData() && pruebasPCB.length === 0 ? (
+      {loadingPCB && pruebasPCB.length === 0 ? (
         <Spinner id="loading PCB info" animation="border" className="espaciadoVertical" />
       ) : (
         <h6> </h6>
@@ -172,7 +174,7 @@ const Home = () => {
       )}
 
 
-      {getLoadingFAData() && pruebasFA.length === 0 ? (
+      {loadingFA === true && pruebasFA.length === 0 ? (
         <Spinner id="loading FA info" animation="border" className="espaciadoVertical" />
       ) : (
         <h6> </h6>
