@@ -6,7 +6,6 @@ const server = process.env.REACT_APP_SERVER_URL;
 export const GetGMSerialRelation = async (serialNumber, setLoadingPCB, setLoadingFA) => { 
     try {
         const response = await axios.get(`${server}/api/GMSerials?serialNumber=${serialNumber}`)
-        console.log(`${server}/api/GMSerials?serialNumber=${serialNumber}`);
         if (response.data.length === 0 || response === undefined) {
 
             Swal.fire({ //WE KEPT THIS ERROR MESSAGE BECAUSE IN CASE OF WE COULDN'T GET THIS DATA WILL FINISH THE SEARCH PROCESS.
@@ -17,12 +16,11 @@ export const GetGMSerialRelation = async (serialNumber, setLoadingPCB, setLoadin
                 timer: 2000
             });
 
+            return "End process"
           setLoadingFA(false)
         }else{
-            console.log(response.data[0]);
             const GM70SerialNumber = response.data[0].code70
-            console.log(GM70SerialNumber);
-            MainExecution(GM70SerialNumber);
+            return GM70SerialNumber;
         }
     } catch (error) {
         console.log(error);

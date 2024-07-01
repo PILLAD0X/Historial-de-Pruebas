@@ -22,13 +22,12 @@ const Home = () => {
   const [pruebasCodigoNoIdentif, setPruebasCodigoNoIdentif] = useState([]);
   const [parentChild, setParentChild] = useState([]); //variable donde recibimos la relacion de parent y child
   
-  const [mfgYear, setMfgYear] = useState([""]);
   const [detalle70Barcode, setdetalle70Barcode] = useState([]); // variable para el desglose de la conversion a series de 70, 23, 15.
   const txtSerialNumber = useRef(); //variable para tomar lo escrito en el input de la serie
   const { loadingPCB, setLoadingPCB, loadingFA, setLoadingFA  } = useLoading();
 
   const handleGetParetChild = (serialNumber) => {
-    MainExecution(serialNumber, setParentChild, parentChild, setMfgYear, setdetalle70Barcode, setPruebasCodigoNoIdentif,setPruebasFA, setPruebasPCB, setLoadingPCB, setLoadingFA);    
+    MainExecution(serialNumber, setParentChild, setdetalle70Barcode, setPruebasCodigoNoIdentif,setPruebasFA, setPruebasPCB, setLoadingPCB, setLoadingFA);    
   };  
   
   // metodo llamado que desencadena la ejecucion
@@ -61,7 +60,6 @@ const Home = () => {
     setdetalle70Barcode([]);
     setLoadingPCB(false);
     setLoadingFA(false);
-    setMfgYear("");
     txtSerialNumber.current.value = "";
     txtSerialNumber.current.focus();
   };

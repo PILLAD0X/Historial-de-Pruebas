@@ -4,12 +4,13 @@ import Swal1 from "sweetalert";
 import { GetTestHistory } from "./TestHistory";
 import ParseSerialNumberTo23 from "./parseSerialNumber";
 import getMFGYear15LengthCodes from './MFGYear15LengthCodes'
+import { GetGMSerialRelation } from "./GMSerials";
 
 // Aquí declaramos la variable server y la obtenemos de las variables de entorno
 const server = process.env.REACT_APP_SERVER_URL;
 
-export const MainExecution = async (serialNumber, setParentChild, parentChild, setMfgYear, setdetalle70Barcode, setPruebasCodigoNoIdentif, setPruebasFA, setPruebasPCB, setLoadingPCB, setLoadingFA) => {
-    //const {setLoadingPCB, setLoadingFA  } = useLoading();
+export const MainExecution = async (serialNumber, setParentChild, setdetalle70Barcode, setPruebasCodigoNoIdentif, setPruebasFA, setPruebasPCB, setLoadingPCB, setLoadingFA) => {
+    //const {setLoadingPCB, setLoadingFA} = useLoading();
     if (
         serialNumber.length === 15 ||
         serialNumber.length === 23 ||
@@ -20,14 +21,10 @@ export const MainExecution = async (serialNumber, setParentChild, parentChild, s
         serialNumber.length === 70
     ) { // the serial number has the right length
         try {
-            console.log(serialNumber);
             //GET PARENT-CHILD RELATIONSHIP
             const response = await axios.get(`${server}/api/ParentChildRelation?serialNumber=${serialNumber}`);
-            
-            console.log('setParentChild:', parentChild);
-
             if (response.data.length === 0) {// When parent-child relationship don't exist.
-                console.log('entramos al caso de que no existe relacion')
+                
                 setParentChild('No se encontro una relacion entre Parent y Child');
                 //"success", "error", "warning", "info"
                 Swal.fire({
@@ -40,9 +37,23 @@ export const MainExecution = async (serialNumber, setParentChild, parentChild, s
                 setLoadingPCB(false);
                 if (serialNumber.length === 15) { // WHEN AN AMPLIFIER HASN'T A PARENT-CHILD RELATIONSHIP
 
-                    getMFGYear15LengthCodes().then(MFGYidentifier => { // we start the popup that require mfgyear
+                    getMFGYear15LengthCodes().then(async MFGYidentifier => { // we start the popup that require mfgyear
                     if (MFGYidentifier) {
-                        GetTestHistory(serialNumber, MFGYidentifier, "GM15Serial", {setPruebasCodigoNoIdentif, setPruebasFA, setPruebasPCB},setLoadingPCB, setLoadingFA );
+                        
+
+                       var responseTestHistoryF = await GetTestHistory(serialNumber, MFGYidentifier, "GM15Serial", {setPruebasCodigoNoIdentif, setPruebasFA, setPruebasPCB},setLoadingPCB,setLoadingFA);
+                        if( responseTestHistoryF === "Could not found test history"){ // if we couldn't get a test history we going to check if we can get GMserial realtio
+                            var GM70Serial = await GetGMSerialRelation(serialNumber)
+                            if(GM70Serial !== 'End process') {
+                                MainExecution(await GM70Serial, setParentChild, setdetalle70Barcode, setPruebasCodigoNoIdentif, setPruebasFA, setPruebasPCB, setLoadingPCB, setLoadingFA)
+                            }else{
+
+                                setLoadingFA(false);
+                            }
+                        }else{
+
+                        }
+                        
                     } else {
                         
                         Swal.fire({
@@ -69,28 +80,20 @@ export const MainExecution = async (serialNumber, setParentChild, parentChild, s
                         let detail70serial = JSON.parse(ParseSerialNumberTo23(serialNumber))
                         setdetalle70Barcode(detail70serial);
                         const mfgYear = detail70serial.code23.substr(1, 1);// serialNumber.substr(1,1);
-                        setLoadingFA();
+                       // setLoadingFA(true);
                         GetTestHistory(detail70serial.code23, mfgYear, "FA", {setPruebasCodigoNoIdentif, setPruebasFA, setPruebasPCB}, setLoadingPCB, setLoadingFA);
                     }
                 }
-
             }else { //When the parent-child relationship exist.
-                  setParentChild(response.data[0]);
-                  setMfgYear(response.data[0].mfgYear); //// PARA QUE SE USA EL MFG YEAR ??
-  
+                  setParentChild(response.data[0]);  
                   GetTestHistory(response.data[0].child, response.data[0].mfg_year, "PCB", {setPruebasCodigoNoIdentif, setPruebasFA, setPruebasPCB}, setLoadingPCB, setLoadingFA);
   
                   if (response.data[0].parent.length === 15 || response.data[0].parent.length === 23) {//IF the parent serial lenght is equal to 15 or 23 we do this. 
-                     
                       GetTestHistory(response.data[0].parent, response.data[0].mfg_year, "FA", {setPruebasCodigoNoIdentif, setPruebasFA, setPruebasPCB}, setLoadingPCB, setLoadingFA);
                   } else if (response.data[0].parent.length > 23) { //If the 
-  
                     let detail70serial = JSON.parse(ParseSerialNumberTo23(response.data[0].parent));
-
                     setdetalle70Barcode(detail70serial);
-
                     const mfgYear = detail70serial.code23.substr(1, 1);// serialNumber.substr(1,1)
-
                     GetTestHistory(detail70serial.code23, mfgYear, "FA", {setPruebasCodigoNoIdentif, setPruebasFA, setPruebasPCB}, setLoadingPCB, setLoadingFA);
                   }
               }
@@ -106,12 +109,11 @@ export const MainExecution = async (serialNumber, setParentChild, parentChild, s
     } else {
         setLoadingPCB(false);
         setLoadingFA(false);
-
         Swal1("ATENCION!", "El numero de serie ingresado no cumple con la longitud estandar, la logitud estandar permitida para una serie es de: 15, 23, 36, 43, 45, 55 ó 70 caracteres.", "error")
+        console.log(serialNumber.length);
     }
 };
 
 
 
 //PENDIENTE EN CASO DE QUE SE UTILICE UN CODIGO QUE 15 Y ESTE NO ENCUENTRE PRUEBAS USARLO PARA BUSCAR EN EL GM PARA INTENTAR UBICAR EL CODIGO DE 70 Y buscar con el de 15
-
