@@ -1,0 +1,17 @@
+.display-container{
+    display: flex;
+}
+.divProductProperties{
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    align-items: center;
+    
+    flex-flow: row wrap;
+}
+.iconPCB{
+    font-size: x-large;
+}
+.PCBInf{
+    cursor: pointer;
+}

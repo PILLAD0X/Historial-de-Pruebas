@@ -1,6 +1,5 @@
 import Swal from "sweetalert2";
 import axios from "axios";
-import { MainExecution } from "./MainExecution";
 
 const server = process.env.REACT_APP_SERVER_URL;
 export const GetGMSerialRelation = async (serialNumber, setLoadingPCB, setLoadingFA) => { 

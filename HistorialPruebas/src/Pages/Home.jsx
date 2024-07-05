@@ -26,8 +26,9 @@ const Home = () => {
   const txtSerialNumber = useRef(); //variable para tomar lo escrito en el input de la serie
   const { loadingPCB, setLoadingPCB, loadingFA, setLoadingFA  } = useLoading();
 
+
   const handleGetParetChild = (serialNumber) => {
-    MainExecution(serialNumber, setParentChild, setdetalle70Barcode, setPruebasCodigoNoIdentif,setPruebasFA, setPruebasPCB, setLoadingPCB, setLoadingFA);    
+    MainExecution(serialNumber, setParentChild, setdetalle70Barcode, setPruebasCodigoNoIdentif,setPruebasFA, setPruebasPCB, setLoadingPCB, setLoadingFA,  parentChild);    
   };  
   
   // metodo llamado que desencadena la ejecucion

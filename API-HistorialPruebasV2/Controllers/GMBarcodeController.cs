@@ -1,11 +1,6 @@
 using API_HistorialPruebasV2.models;
-using API_HistorialPruebasV2.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
-using System.Threading.Tasks;
 
 namespace API_HistorialPruebasV2.Controllers
 {
@@ -41,7 +36,6 @@ namespace API_HistorialPruebasV2.Controllers
                         while (await reader.ReadAsync())
                         {
                             GMBarcode serials = new(){
-                                ////PENDIENTE FINALIZAR
                                 code15 = reader["15DigitBarcode"] != DBNull.Value ? reader["15DigitBarcode"].ToString() : string.Empty,
                                 code23 = reader["23DigitBarcode"] != DBNull.Value ? reader["23DigitBarcode"].ToString() : string.Empty,
                                 code70 = reader["GMBigBarcode"] != DBNull.Value ? reader["GMBigBarcode"].ToString() : string.Empty,
