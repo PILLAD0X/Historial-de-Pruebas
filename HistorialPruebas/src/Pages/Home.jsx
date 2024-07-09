@@ -205,7 +205,7 @@ const Home = () => {
             id="input"
             onClick={exportToExcel}
           >
-            Descargar Datos <FaIcons.FaDownload />
+            Descargar Historial de pruebas <FaIcons.FaDownload />
           </Button>
         </div>
       ) : (

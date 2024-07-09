@@ -1,0 +1,19 @@
+.centrar{
+    margin-left: 2%;
+    margin-right: 2%;
+} 
+.CTitulos{
+    text-align: center;
+}
+.buscador{
+    display: flex;
+    justify-content: flex-end;
+}
+.txtbusquedaComponentes{
+    margin-bottom: 1rem;
+    width: 50%;
+}
+.scroll{
+    
+    overflow-x: scroll;
+}

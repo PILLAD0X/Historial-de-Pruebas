@@ -1,7 +1,6 @@
 import {React} from "react"; 
 import 'bootstrap/dist/css/bootstrap.css';
 import '../styles/TablePruebas.css';
-//import { Table } from "react-bootstrap";
 const TablePruebas = (props)=> {
     return(
 

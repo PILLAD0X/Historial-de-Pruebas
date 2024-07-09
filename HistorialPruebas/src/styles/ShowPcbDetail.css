@@ -1,0 +1,16 @@
+.custom-swal-width {
+    width: 70% !important;
+    /* Ajusta el tamaño según tus necesidades */
+    height: 90%;
+    max-width: 90% !important;
+    /* Ajusta el tamaño máximo */
+}
+
+.centrar {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.CTitulos {
+    text-align: center;
+}
