@@ -30,7 +30,6 @@ const TablePruebas = (props)=> {
             {props.tableType === 'PCB' & props.infoTestTable !== 0 & props.infoTestTable !== undefined ? 
             (
 
-                
                 <table className='table table-hover table-sm table-striped'>
                 <thead className="table-dark CTitulos">
                     <tr key={0}>

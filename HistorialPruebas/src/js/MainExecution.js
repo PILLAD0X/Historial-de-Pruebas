@@ -23,23 +23,10 @@ export const MainExecution = async (serialNumber, setParentChild, setdetalle70Ba
     ) { // the serial number has the right length
         try {
             //GET PARENT-CHILD RELATIONSHIP
-            //const response = await axios.get(`${server}/api/ParentChildRelation?serialNumber=${serialNumber}`);
-                const parent_pcb_raltion = await GetParentChildRelation(serialNumber, setParentChild, setLoadingPCB);
             
-             console.log("parent_pcb_raltion: ", parent_pcb_raltion);
-            //if (response.data.length === 0) {// When parent-child relationship don't exist.
+            const parent_pcb_raltion = await GetParentChildRelation(serialNumber, setParentChild, setLoadingPCB);
+            
             if (parent_pcb_raltion === 'No se encontro una relacion entre Parent y Child') {// When parent-child relationship don't exist.
-                /*
-                setParentChild('No se encontro una relacion entre Parent y Child');
-                //"success", "error", "warning", "info"
-                Swal.fire({
-                    position: "center",
-                    icon: "warning",
-                    title: "No se encontro una relacion entre amplificador y PCB",
-                    showConfirmButton: false,
-                    timer: 1400
-                });
-                setLoadingPCB(false);*/
 
                 setParentChild(parent_pcb_raltion);
                 if (serialNumber.length === 15) { // WHEN AN AMPLIFIER HASN'T A PARENT-CHILD RELATIONSHIP
@@ -92,24 +79,7 @@ export const MainExecution = async (serialNumber, setParentChild, setdetalle70Ba
                     }
                 }
             }else { //When the parent-child relationship exist.
-
-                /*setParentChild(response.data[0]);  
-                GetPcbRelation(response.data[0].child, setParentChild);
-
-                GetTestHistory(response.data[0].child, response.data[0].mfg_year, "PCB", {setPruebasCodigoNoIdentif, setPruebasFA, setPruebasPCB}, setLoadingPCB, setLoadingFA);
-
-                if (response.data[0].parent.length === 15 || response.data[0].parent.length === 23) {//IF the parent serial lenght is equal to 15 or 23 we do this. 
-                    GetTestHistory(response.data[0].parent, response.data[0].mfg_year, "FA", {setPruebasCodigoNoIdentif, setPruebasFA, setPruebasPCB}, setLoadingPCB, setLoadingFA);
-                } else if (response.data[0].parent.length > 23) { //If the 
-                let detail70serial = JSON.parse(ParseSerialNumberTo23(response.data[0].parent));
-                setdetalle70Barcode(detail70serial);
-                const mfgYear = detail70serial.code23.substr(1, 1);// serialNumber.substr(1,1)
-                GetTestHistory(detail70serial.code23, mfgYear, "FA", {setPruebasCodigoNoIdentif, setPruebasFA, setPruebasPCB}, setLoadingPCB, setLoadingFA);
-                }*/
-               console.log(parent_pcb_raltion);
-               // setParentChild(parent_pcb_raltion);  
-                //GetPcbRelation(parent_pcb_raltion.child, setParentChild);
-
+                
                 GetTestHistory(parent_pcb_raltion.child, parent_pcb_raltion.mfg_year, "PCB", {setPruebasCodigoNoIdentif, setPruebasFA, setPruebasPCB}, setLoadingPCB, setLoadingFA);
 
                 if (parent_pcb_raltion.parent.length === 15 || parent_pcb_raltion.parent.length === 23) {//IF the parent serial lenght is equal to 15 or 23 we do this. 
@@ -134,7 +104,6 @@ export const MainExecution = async (serialNumber, setParentChild, setdetalle70Ba
         setLoadingPCB(false);
         setLoadingFA(false);
         Swal1("ATENCION!", "El numero de serie ingresado no cumple con la longitud estandar, la logitud estandar permitida para una serie es de: 15, 23, 36, 43, 45, 55 ó 70 caracteres.", "error")
-        console.log(serialNumber.length);
     }
 };
 

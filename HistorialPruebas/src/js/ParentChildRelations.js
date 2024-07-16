@@ -8,8 +8,8 @@ export const GetParentChildRelation = async (serialNumber, setParentChild, setLo
     try {
         const response = await axios.get(`${server}/api/ParentChildRelation?serialNumber=${serialNumber}`);
 
-        if (response.data.length === 0 || response === undefined) {
-
+        if (response.data.length === 0 || response === undefined || response.data[0].parent ==='') {
+            
             setParentChild('No se encontro una relacion entre Parent y Child');
             //"success", "error", "warning", "info"
             Swal.fire({
@@ -25,14 +25,8 @@ export const GetParentChildRelation = async (serialNumber, setParentChild, setLo
 
         }else{
             
-           // console.log(response.data[0]);
-            await PcbTopBottomRelation(response.data[0].child, setParentChild);
-            //setParentChild(response.data[0]);
+            setParentChild(response.data[0])
             
-            setParentChild((prevParentChildInfo) => [...prevParentChildInfo, response.data[0]])
-            
-
-
             return response.data[0];
         }
     } catch (error) {
@@ -42,7 +36,7 @@ export const GetParentChildRelation = async (serialNumber, setParentChild, setLo
     }
 
 }
-
+/*
 const PcbTopBottomRelation = async (serialNumber, setParentChild) => { 
     const mfgYear = serialNumber.substring(1,2);
     const serialP1 = serialNumber.substring(0,9);
@@ -70,3 +64,4 @@ const PcbTopBottomRelation = async (serialNumber, setParentChild) => {
     }
 
 }
+*/

@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\temp\\Desarrollo\\Desarrollo\\Historial-de-Pruebas\\API-HistorialPruebasV2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|c:\\temp\\desarrollo\\desarrollo\\historial-de-pruebas\\api-historialpruebasv2\\controllers\\testerloginformationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|solutionrelative:controllers\\testerloginformationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|c:\\temp\\desarrollo\\desarrollo\\historial-de-pruebas\\api-historialpruebasv2\\controllers\\siplacecomponents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|solutionrelative:controllers\\siplacecomponents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|c:\\temp\\desarrollo\\desarrollo\\historial-de-pruebas\\api-historialpruebasv2\\controllers\\pcbrelationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|solutionrelative:controllers\\pcbrelationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|c:\\temp\\desarrollo\\desarrollo\\historial-de-pruebas\\api-historialpruebasv2\\models\\siplacecomponents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|solutionrelative:models\\siplacecomponents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|c:\\temp\\desarrollo\\desarrollo\\historial-de-pruebas\\api-historialpruebasv2\\models\\pcbrelation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|solutionrelative:models\\pcbrelation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|c:\\temp\\desarrollo\\desarrollo\\historial-de-pruebas\\api-historialpruebasv2\\models\\genie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|solutionrelative:models\\genie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|c:\\temp\\desarrollo\\desarrollo\\historial-de-pruebas\\api-historialpruebasv2\\controllers\\geniecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|solutionrelative:controllers\\geniecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|c:\\temp\\desarrollo\\desarrollo\\historial-de-pruebas\\api-historialpruebasv2\\controllers\\testerloginformationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|solutionrelative:controllers\\testerloginformationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,31 +30,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 214,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PcbRelationController.cs",
-              "DocumentMoniker": "C:\\temp\\Desarrollo\\Desarrollo\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Controllers\\PcbRelationController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PcbRelationController.cs",
-              "ToolTip": "C:\\temp\\Desarrollo\\Desarrollo\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Controllers\\PcbRelationController.cs",
-              "RelativeToolTip": "Controllers\\PcbRelationController.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAkwDMAAAANAAAA",
+              "DocumentIndex": 0,
+              "Title": "SiplaceComponents.cs",
+              "DocumentMoniker": "C:\\temp\\Desarrollo\\Desarrollo\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Controllers\\SiplaceComponents.cs",
+              "RelativeDocumentMoniker": "Controllers\\SiplaceComponents.cs",
+              "ToolTip": "C:\\temp\\Desarrollo\\Desarrollo\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Controllers\\SiplaceComponents.cs",
+              "RelativeToolTip": "Controllers\\SiplaceComponents.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T15:04:12.402Z"
+              "WhenOpened": "2024-07-16T00:24:18.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SiplaceComponents.cs",
+              "DocumentMoniker": "C:\\temp\\Desarrollo\\Desarrollo\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Models\\SiplaceComponents.cs",
+              "RelativeDocumentMoniker": "Models\\SiplaceComponents.cs",
+              "ToolTip": "C:\\temp\\Desarrollo\\Desarrollo\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Models\\SiplaceComponents.cs",
+              "RelativeToolTip": "Models\\SiplaceComponents.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T00:16:14.383Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PcbRelation.cs",
-              "DocumentMoniker": "C:\\temp\\Desarrollo\\Desarrollo\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Models\\PcbRelation.cs",
-              "RelativeDocumentMoniker": "Models\\PcbRelation.cs",
-              "ToolTip": "C:\\temp\\Desarrollo\\Desarrollo\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Models\\PcbRelation.cs",
-              "RelativeToolTip": "Models\\PcbRelation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAvAAAA",
+              "Title": "Genie.cs",
+              "DocumentMoniker": "C:\\temp\\Desarrollo\\Desarrollo\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Models\\Genie.cs",
+              "RelativeDocumentMoniker": "Models\\Genie.cs",
+              "ToolTip": "C:\\temp\\Desarrollo\\Desarrollo\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Models\\Genie.cs",
+              "RelativeToolTip": "Models\\Genie.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T14:59:29.825Z"
+              "WhenOpened": "2024-07-15T20:32:52.502Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -60,13 +79,14 @@
               "RelativeDocumentMoniker": "Controllers\\GenieController.cs",
               "ToolTip": "C:\\temp\\Desarrollo\\Desarrollo\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Controllers\\GenieController.cs",
               "RelativeToolTip": "Controllers\\GenieController.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAmwDUAAAAAAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAA1wCkAAAB0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T15:22:14.918Z"
+              "WhenOpened": "2024-06-04T15:22:14.918Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "TesterLogInformationController.cs",
               "DocumentMoniker": "C:\\temp\\Desarrollo\\Desarrollo\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Controllers\\TesterLogInformationController.cs",
               "RelativeDocumentMoniker": "Controllers\\TesterLogInformationController.cs",

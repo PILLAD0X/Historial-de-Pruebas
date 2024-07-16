@@ -6,9 +6,9 @@ import { Button } from "react-bootstrap";
 import * as FaIcons from "react-icons/fa";
 const ComponentsTable = () => {
     return (
-        <div className="table-responsive CTitulos scroll">
+        <div className="table-responsive CTitulos ">
             <h1>SMT</h1>
-            <table className='table table-hover table-sm table-striped'>
+            <table className='table table-hover table-sm table-striped scroll'>
                 <thead className="table-dark CTitulos">
                     <tr key={0}>
                         <th>Serial Number</th>
@@ -321,7 +321,7 @@ const ComponentsTable = () => {
             </table>
 
             <h1>THT</h1>
-            <table className='table table-hover table-sm table-striped'>
+            <table className='table table-hover table-sm table-striped scroll'>
                 <thead className="table-dark CTitulos">
                     <tr key={0}>
                         <th>Serial Number</th>

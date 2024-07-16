@@ -34,7 +34,6 @@ function ModalPCBDetail({ show, handleClose }) {
                             className="btnbuscar"
                             title="Buscar"
                             id="input"
-                           // onClick={ejecucion}
                         >
                             <FaIcons.FaSearch />
                         </Button>

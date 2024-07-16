@@ -24,7 +24,7 @@ namespace API_HistorialPruebasV2.Controllers
             {
                 await connection.OpenAsync();
 
-                using (SqlCommand cmd = new("getGenieRelationship", connection))
+                using (SqlCommand cmd = new("GetProductRelation", connection))
                 {   
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
@@ -40,6 +40,7 @@ namespace API_HistorialPruebasV2.Controllers
                             Genie relation = new(){
                                 parent = reader["parent"] != DBNull.Value ? reader["parent"].ToString() : string.Empty,
                                 child = reader["child"] != DBNull.Value ? reader["child"].ToString() : string.Empty,
+                                BSS_Barcode = reader["BSS_Barcode"] != DBNull.Value ? reader["BSS_Barcode"].ToString() : string.Empty,
                                 mfg_year = reader["mfg_year"] != DBNull.Value ? Convert.ToInt32(reader["mfg_year"]) : 0,
                             };
                             genie.Add(relation);

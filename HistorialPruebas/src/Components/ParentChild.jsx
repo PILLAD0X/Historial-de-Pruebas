@@ -18,50 +18,38 @@ const ParentChild = (props)=> {
     const handleCloseModal = () => {
     setShowModal(false);
     };
-    
-    if(props.datos.length > 1){ 
+    if(props.datos !== 'No se encontro una relacion entre Parent y Child'){ 
         return(
             <div className='divProductProperties'>
-                { props.datos === 'No se encontro una relacion entre Parent y Child' ? 
-                <h3><FaIcons.FaExclamationTriangle/>No se encontro una relacion PCB - amplificador para la serie buscada</h3>       
-                :
                 <p className='lbspropiedades propiedadesT'><FmIcons.MdCloseFullscreen/> AmpRelation:</p>
-                }
-                { props.datos === 'No se encontro una relacion entre Parent y Child'  ?
-                    <h6> </h6>
-                :
-                    <p className='lbspropiedades propiedadesT'>Amplifier:</p>
-                }
-                { props.datos === 'No se encontro una relacion entre Parent y Child'  ?
-                    <h6> </h6>
-                :
-                <p className='lbspropiedadesnum'>{props.datos[1].parent}</p>
-                }
-                { props.datos === 'No se encontro una relacion entre Parent y Child'  ?
-                    <h6> </h6>
-                :
-                    <p className='lbspropiedades propiedadesT'>PCB: </p>
-                }
-                { props.datos === 'No se encontro una relacion entre Parent y Child'  ?
-                    <h6> </h6>
-                :
+                <p className='lbspropiedades propiedadesT'>Amplifier:</p>
+                <p className='lbspropiedadesnum'>{props.datos.parent}</p>
+                <p className='lbspropiedades propiedadesT'>PCB: </p>
+                <div className="">
                     <div className="">
-                        <div className="">
-                            <div className="display-container">
-                                <p className='lbspropiedades propiedadesT'> <FiIcons.HiArrowNarrowUp className="iconPCB"/></p>
-                                <a className='lbspropiedadesnum PCBInf' title="Ver componentes">{props.datos[1].child}</a>
-                            </div>
+                        <div className="display-container">
+                            <p className='lbspropiedades propiedadesT'> <FiIcons.HiArrowNarrowUp className="iconPCB"/></p>
+                            <a className='lbspropiedadesnum PCBInf' title="Ver componentes" onClick={handleLinkClick}>{props.datos.child}</a>
+                        </div>
+                        { props.datos.bsS_Barcode !== ''  ?
                             <div className="display-container">
                                 <p className='lbspropiedades propiedadesT'><FiIcons.HiArrowSmDown className="iconPCB"/></p>
-                                <a className='lbspropiedadesnum PCBInf' title="Ver componentes">{props.datos[0].bsS_Barcode}</a>
+                                <a className='lbspropiedadesnum PCBInf' title="Ver componentes" onClick={handleLinkClick}>{props.datos.bsS_Barcode}</a>
                             </div>
-                        </div>
+                        :
+                            <div className="display-container">
+                                <p className='lbspropiedades propiedadesT'><FiIcons.HiArrowSmDown className="iconPCB"/></p>
+                                <p className='lbspropiedades propiedadesT'><FaIcons.FaExclamationTriangle/> Sin Registro de Bottom </p>
+                            </div>
+                        }
+
                     </div>
-                }  
+                </div>
+                 
                 <ModalPCBDetail show={showModal} handleClose={handleCloseModal} />
             </div>
         );
-    }else{ //When we don't have a Top and botton relation for the PCB
+    }else { //When we don't have a Top and botton relation for the PCB
         return(
             <div className='divProductProperties'>
                 { props.datos === 'No se encontro una relacion entre Parent y Child' ? 
@@ -84,23 +72,7 @@ const ParentChild = (props)=> {
                 :
                     <p className='lbspropiedades propiedadesT'>PCB: </p>
                 }
-                { props.datos === 'No se encontro una relacion entre Parent y Child'  ?
-                    <h6> </h6>
-                :
-                    <div className="">
-                        <div className=""> {/*CASO CUANDO NO HAYA REGISTRO DE DATO EN BOTTOM */}
-                            <div className="display-container">
-                                <p className='lbspropiedades propiedadesT'> <FiIcons.HiArrowNarrowUp className="iconPCB"/></p>
-                                <a className='lbspropiedadesnum PCBInf' title="Ver componentes" onClick={handleLinkClick}>{props.datos[0].child}</a>
-                            </div>
-                            <div className="display-container">
-                                <p className='lbspropiedades propiedadesT'><FiIcons.HiArrowSmDown className="iconPCB"/></p>
-                                <p className='lbspropiedades propiedadesT'><FaIcons.FaExclamationTriangle/> Sin Registro de Bottom </p>
-                            
-                            </div>
-                        </div>
-                    </div>
-                } 
+
                 <ModalPCBDetail show={showModal} handleClose={handleCloseModal} /> 
             </div>
         );
