@@ -6,6 +6,7 @@ export const GetTestHistory = async (serialNumber, mfgYear, testType, {setPrueba
    
     try {
         const response = await axios.get(`${server}/api/Historial?numSerie=${serialNumber}&year=${mfgYear}`)
+        console.log(response.data);
         if (response.data.length === 0 || response === undefined) { //WHEN WE HAVEN'T A TEST HISTORY
             const failMessage = () =>{
                 Swal.fire({

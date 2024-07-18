@@ -41,7 +41,6 @@ const TablePruebas = (props)=> {
                         <th>Test Number</th>
                         <th>Tester</th>
                         <th>Employee Number</th>
-                        <th>Record Number</th>
                         <th>Box</th>
                         <th>Pallet</th>
                     </tr>
@@ -53,7 +52,7 @@ const TablePruebas = (props)=> {
                     if(teststatus === 'F'){
                         return (
                             <tr className="table-danger" key={TEST.testDateTime}>
-                                <td>{TEST.productionLine}</td>
+                                <td>{TEST.line}</td>
                                 <td>{TEST.barcodeSerialNumber}</td>
                                 <td>{TEST.testResult}</td>
                                 <td>{TEST.testDateTime}</td>
@@ -61,7 +60,6 @@ const TablePruebas = (props)=> {
                                 <td>{TEST.certifiedTestNumber}</td>
                                 <td>{TEST.testterID}</td>
                                 <td>{TEST.employeeNumber}</td>
-                                <td>{TEST.recordNumber}</td>
                                 <td>{TEST.box}</td>
                                 <td>{TEST.pallet}</td>
                             </tr>
@@ -70,7 +68,7 @@ const TablePruebas = (props)=> {
                     }else{
                         return (
                             <tr key={TEST.testDateTime}>
-                                <td>{TEST.productionLine}</td>
+                                <td>{TEST.line}</td>
                                 <td>{TEST.barcodeSerialNumber}</td>
                                 <td>{TEST.testResult}</td>
                                 <td>{TEST.testDateTime}</td>
@@ -78,7 +76,6 @@ const TablePruebas = (props)=> {
                                 <td>{TEST.certifiedTestNumber}</td>
                                 <td>{TEST.testterID}</td>
                                 <td>{TEST.employeeNumber}</td>
-                                <td>{TEST.recordNumber}</td>
                                 <td>{TEST.box}</td>
                                 <td>{TEST.pallet}</td>
                             </tr>
@@ -101,7 +98,6 @@ const TablePruebas = (props)=> {
                         <th>Test Number</th>
                         <th>Tester</th>
                         <th>Employee Number</th>
-                        <th>Record Number</th>
                         <th>Box</th>
                         <th>Pallet</th>
                     </tr>
@@ -113,7 +109,7 @@ const TablePruebas = (props)=> {
                     if(teststatus === 'F'){
                         return (
                             <tr className="table-danger" key={TEST.testDateTime}>
-                                <td>{TEST.productionLine}</td>
+                                <td>{TEST.line}</td>
                                 <td>{TEST.barcodeSerialNumber}</td>
                                 <td>{TEST.testResult}</td>
                                 <td>{TEST.testDateTime}</td>
@@ -121,7 +117,6 @@ const TablePruebas = (props)=> {
                                 <td>{TEST.certifiedTestNumber}</td>
                                 <td>{TEST.testterID}</td>
                                 <td>{TEST.employeeNumber}</td>
-                                <td>{TEST.recordNumber}</td>
                                 <td>{TEST.box}</td>
                                 <td>{TEST.pallet}</td>
                             </tr>
@@ -130,7 +125,7 @@ const TablePruebas = (props)=> {
                     }else{
                         return (
                             <tr key={TEST.testDateTime}>
-                                <td>{TEST.productionLine}</td>
+                                <td>{TEST.line}</td>
                                 <td>{TEST.barcodeSerialNumber}</td>
                                 <td>{TEST.testResult}</td>
                                 <td>{TEST.testDateTime}</td>
@@ -138,7 +133,6 @@ const TablePruebas = (props)=> {
                                 <td>{TEST.certifiedTestNumber}</td>
                                 <td>{TEST.testterID}</td>
                                 <td>{TEST.employeeNumber}</td>
-                                <td>{TEST.recordNumber}</td>
                                 <td>{TEST.box}</td>
                                 <td>{TEST.pallet}</td>
                             </tr>
@@ -164,7 +158,6 @@ const TablePruebas = (props)=> {
                         <th>Test Number</th>
                         <th>Tester</th>
                         <th>Employee Number</th>
-                        <th>Record Number</th>
                         <th>Box</th>
                         <th>Pallet</th>
                     </tr>
@@ -176,7 +169,7 @@ const TablePruebas = (props)=> {
                     if(teststatus === 'F'){
                         return (
                             <tr className="table-danger" key={TEST.testDateTime}>
-                                <td>{TEST.productionLine}</td>
+                                <td>{TEST.line}</td>
                                 <td>{TEST.barcodeSerialNumber}</td>
                                 <td>{TEST.testResult}</td>
                                 <td>{TEST.testDateTime}</td>
@@ -184,7 +177,6 @@ const TablePruebas = (props)=> {
                                 <td>{TEST.certifiedTestNumber}</td>
                                 <td>{TEST.testterID}</td>
                                 <td>{TEST.employeeNumber}</td>
-                                <td>{TEST.recordNumber}</td>
                                 <td>{TEST.box}</td>
                                 <td>{TEST.pallet}</td>
                             </tr>
@@ -193,7 +185,7 @@ const TablePruebas = (props)=> {
                     }else{
                         return (
                             <tr key={TEST.testDateTime}>
-                                <td>{TEST.productionLine}</td>
+                                <td>{TEST.line}</td>
                                 <td>{TEST.barcodeSerialNumber}</td>
                                 <td>{TEST.testResult}</td>
                                 <td>{TEST.testDateTime}</td>
@@ -201,7 +193,6 @@ const TablePruebas = (props)=> {
                                 <td>{TEST.certifiedTestNumber}</td>
                                 <td>{TEST.testterID}</td>
                                 <td>{TEST.employeeNumber}</td>
-                                <td>{TEST.recordNumber}</td>
                                 <td>{TEST.box}</td>
                                 <td>{TEST.pallet}</td>
                             </tr>

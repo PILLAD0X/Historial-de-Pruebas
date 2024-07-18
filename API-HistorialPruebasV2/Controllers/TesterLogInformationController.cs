@@ -24,7 +24,7 @@ namespace API_HistorialPruebasV2.Controllers
             {
                 await connection.OpenAsync();
 
-                using (SqlCommand cmd = new("getTestHistory", connection))
+                using (SqlCommand cmd = new("getTestHistoryv2", connection))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
@@ -39,6 +39,7 @@ namespace API_HistorialPruebasV2.Controllers
                         {
                             TesterLogInformation test = new()
                             {
+                                Line = reader["Line"] != DBNull.Value ? reader["Line"].ToString() : string.Empty,
                                 ProductionLine = reader["ProductionLine"] != DBNull.Value ? Convert.ToChar(reader["ProductionLine"]) : '\0',
                                 BarcodeSerialNumber = reader["BarcodeSerialNumber"] != DBNull.Value ? reader["BarcodeSerialNumber"].ToString() : string.Empty,
                                 TestResult = reader["TestResult"] != DBNull.Value ? Convert.ToChar(reader["TestResult"]) : '\0',
