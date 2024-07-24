@@ -21,7 +21,7 @@ const TablePruebas = (props)=> {
             ): props.tableType === 'Others' & props.infoTestTable !== 0 & props.infoTestTable !== undefined ?(
                 <h2 className="espaciadoVertical">Historial de Pruebas</h2>
             ):(
-                <h6></h6>
+                <h6> </h6>
             )}
 
             {/**TABLAS */}
@@ -33,7 +33,6 @@ const TablePruebas = (props)=> {
                 <table className='table table-hover table-sm table-striped'>
                 <thead className="table-dark CTitulos">
                     <tr key={0}>
-                        <th>Line</th>
                         <th>Serial Number</th>
                         <th>Test Result</th>
                         <th>Test Date Time</th>                 
@@ -52,7 +51,6 @@ const TablePruebas = (props)=> {
                     if(teststatus === 'F'){
                         return (
                             <tr className="table-danger" key={TEST.testDateTime}>
-                                <td>{TEST.line}</td>
                                 <td>{TEST.barcodeSerialNumber}</td>
                                 <td>{TEST.testResult}</td>
                                 <td>{TEST.testDateTime}</td>
@@ -68,7 +66,6 @@ const TablePruebas = (props)=> {
                     }else{
                         return (
                             <tr key={TEST.testDateTime}>
-                                <td>{TEST.line}</td>
                                 <td>{TEST.barcodeSerialNumber}</td>
                                 <td>{TEST.testResult}</td>
                                 <td>{TEST.testDateTime}</td>
@@ -90,7 +87,6 @@ const TablePruebas = (props)=> {
                 <table className='table table-hover table-sm table-striped'>
                 <thead className="table-dark CTitulos">
                     <tr key={0}>
-                        <th>Line</th>
                         <th>Serial Number</th>
                         <th>Test Result</th>
                         <th>Test Date Time</th>                 
@@ -109,7 +105,6 @@ const TablePruebas = (props)=> {
                     if(teststatus === 'F'){
                         return (
                             <tr className="table-danger" key={TEST.testDateTime}>
-                                <td>{TEST.line}</td>
                                 <td>{TEST.barcodeSerialNumber}</td>
                                 <td>{TEST.testResult}</td>
                                 <td>{TEST.testDateTime}</td>
@@ -125,7 +120,6 @@ const TablePruebas = (props)=> {
                     }else{
                         return (
                             <tr key={TEST.testDateTime}>
-                                <td>{TEST.line}</td>
                                 <td>{TEST.barcodeSerialNumber}</td>
                                 <td>{TEST.testResult}</td>
                                 <td>{TEST.testDateTime}</td>
@@ -150,7 +144,6 @@ const TablePruebas = (props)=> {
                 <table className='table table-hover table-sm table-striped'>
                 <thead className="table-dark CTitulos">
                     <tr key={0}>
-                        <th>Line</th>
                         <th>Serial Number</th>
                         <th>Test Result</th>
                         <th>Test Date Time</th>                 
@@ -169,7 +162,6 @@ const TablePruebas = (props)=> {
                     if(teststatus === 'F'){
                         return (
                             <tr className="table-danger" key={TEST.testDateTime}>
-                                <td>{TEST.line}</td>
                                 <td>{TEST.barcodeSerialNumber}</td>
                                 <td>{TEST.testResult}</td>
                                 <td>{TEST.testDateTime}</td>
@@ -185,7 +177,6 @@ const TablePruebas = (props)=> {
                     }else{
                         return (
                             <tr key={TEST.testDateTime}>
-                                <td>{TEST.line}</td>
                                 <td>{TEST.barcodeSerialNumber}</td>
                                 <td>{TEST.testResult}</td>
                                 <td>{TEST.testDateTime}</td>
@@ -205,7 +196,7 @@ const TablePruebas = (props)=> {
                 
             ):(
 
-                <h2 className="espaciadoVertical"></h2>
+                <h2 className="espaciadoVertical"> </h2>
             )}
 
 

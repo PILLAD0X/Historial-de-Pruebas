@@ -2,7 +2,7 @@ namespace API_HistorialPruebasV2.Models
 {
     public class TesterLogInformation
     {
-        public string Line { get; set; }
+       // public string Line { get; set; }
         public char ProductionLine { get; set; }
         public string BarcodeSerialNumber { get; set; }
         public char TestResult { get; set; }

@@ -1,4 +1,3 @@
-import axios from "axios";
 import Swal from "sweetalert2";
 import Swal1 from "sweetalert";
 import { GetTestHistory } from "./TestHistory";
@@ -36,7 +35,8 @@ export const MainExecution = async (serialNumber, setParentChild, setdetalle70Ba
                         
 
                        var responseTestHistoryF = await GetTestHistory(serialNumber, MFGYidentifier, "GM15Serial", {setPruebasCodigoNoIdentif, setPruebasFA, setPruebasPCB},setLoadingPCB,setLoadingFA);
-                        if( responseTestHistoryF === "Could not found test history"){ // if we couldn't get a test history we going to check if we can get GMserial realtio
+                        
+                       if( responseTestHistoryF === "Could not found test history"){ // if we couldn't get a test history we going to check if we can get GMserial realtio
                             var GM70Serial = await GetGMSerialRelation(serialNumber)
                             if(GM70Serial !== 'End process') {
                                 MainExecution(await GM70Serial, setParentChild, setdetalle70Barcode, setPruebasCodigoNoIdentif, setPruebasFA, setPruebasPCB, setLoadingPCB, setLoadingFA)

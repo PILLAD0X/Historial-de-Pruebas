@@ -2,22 +2,56 @@ import {React, useState} from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 
 import ModalPCBDetail from '../Components/ModalPCBDetail';
-
-//import '../styles/Home.css'
 import '../styles/ParentChild.css';
 import * as FaIcons from 'react-icons/fa';
 import * as FiIcons from "react-icons/hi";
 import * as FmIcons from "react-icons/md";
 const ParentChild = (props)=> {
     const [showModal, setShowModal] = useState(false);
-    const handleLinkClick = (event) => {
+    const [triggeredBy, setTriggeredBy] = useState('');
+    const [pcb, setPcb] = useState('');
+    const [technology, setTechnology]= useState ('')
+
+    const handleLinkClick = (event, btnclicked, PCB) => {
         event.preventDefault();
+        setTriggeredBy(btnclicked);
+        setPcb(PCB);
         setShowModal(true);
+        PCBTechnology(PCB);
     };
+
+
+    const PCBTechnology = (PCB)=>{ //se utilizara para identificar si la placa fue hecha en Siplace o en panasonic y asi poder renderizar la tabla correcta y traer las pruebas.
+        //console.log
+        const mfgLine = PCB.substring(17,19)
+//        console.log(mfgLine);
+        if (mfgLine == 5){
+            setTechnology('Siplace')            
+        }else if (mfgLine == 7){
+            setTechnology('Siplace')            
+        }else if (mfgLine == 8){
+            setTechnology('Siplace')            
+        }else if (mfgLine == 9){
+            setTechnology('Siplace')            
+        }else if(mfgLine == 10 ){
+            setTechnology('Siplace')
+        }else if (mfgLine == 11){
+            setTechnology('Siplace')    
+            console.log('Estamos en la linea');        
+        }else if (mfgLine == 12){
+            setTechnology('Siplace')            
+        }else if (mfgLine == 13){
+            setTechnology('Siplace')            
+        }else{
+            setTechnology('Panasonic')
+        }
+ //       console.log(technology);
+    }
     
     const handleCloseModal = () => {
     setShowModal(false);
     };
+
     if(props.datos !== 'No se encontro una relacion entre Parent y Child'){ 
         return(
             <div className='divProductProperties'>
@@ -29,12 +63,12 @@ const ParentChild = (props)=> {
                     <div className="">
                         <div className="display-container">
                             <p className='lbspropiedades propiedadesT'> <FiIcons.HiArrowNarrowUp className="iconPCB"/></p>
-                            <a className='lbspropiedadesnum PCBInf' title="Ver componentes" onClick={handleLinkClick}>{props.datos.child}</a>
+                            <a className='lbspropiedadesnum PCBInf' title="Ver componentes" onClick={(e)=> handleLinkClick(e,'Top',props.datos.child)}>{props.datos.child}</a>
                         </div>
                         { props.datos.bsS_Barcode !== ''  ?
                             <div className="display-container">
                                 <p className='lbspropiedades propiedadesT'><FiIcons.HiArrowSmDown className="iconPCB"/></p>
-                                <a className='lbspropiedadesnum PCBInf' title="Ver componentes" onClick={handleLinkClick}>{props.datos.bsS_Barcode}</a>
+                                <a className='lbspropiedadesnum PCBInf' title="Ver componentes" onClick={(e)=> handleLinkClick(e,'Bottom', props.datos.bsS_Barcode)}>{props.datos.bsS_Barcode}</a>
                             </div>
                         :
                             <div className="display-container">
@@ -46,7 +80,7 @@ const ParentChild = (props)=> {
                     </div>
                 </div>
                  
-                <ModalPCBDetail show={showModal} handleClose={handleCloseModal} />
+                <ModalPCBDetail show={showModal} handleClose={handleCloseModal} triggeredBy={triggeredBy} props = {pcb} technology = {technology} />
             </div>
         );
     }else { //When we don't have a Top and botton relation for the PCB
@@ -72,8 +106,6 @@ const ParentChild = (props)=> {
                 :
                     <p className='lbspropiedades propiedadesT'>PCB: </p>
                 }
-
-                <ModalPCBDetail show={showModal} handleClose={handleCloseModal} /> 
             </div>
         );
 

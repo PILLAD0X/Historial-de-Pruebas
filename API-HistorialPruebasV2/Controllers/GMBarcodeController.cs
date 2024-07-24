@@ -44,6 +44,7 @@ namespace API_HistorialPruebasV2.Controllers
                         }
                     }
                 }
+                connection.CloseAsync();
             }
 
             return gmBarcode;
