@@ -7,20 +7,36 @@ import SiplaceTable from "./SiplaceTable";
 import PanasonicTable from "./PanasonicTable";
 import THTTable from "./THTTable";
 const ComponentsTable = ({props}) => {
-  //  console.log(props);
+    console.log(props);
+    console.log(props.PCB);
+    const [topSmtComponents, setTopSmtComponents] = useState([]);
+    const [topThtComponents,setTopThtComponets] = useState([]);
+    const [bottonSmtComponents, setbottomSmtComponents] = useState([]);
     return (
         <>
             {props.triggeredBy === 'Top' ?
                 <div className="table-responsive CTitulos ">
                     <h1>SMT</h1>
                     {props.technology === 'Panasonic' ?
-                        <PanasonicTable/>
+                        <PanasonicTable
+                            setTopSmtComponents = {setTopSmtComponents}
+                            PCB = {props.PCB}
+                            mfgLine = {props.mfgLine}
+                        />
                         : 
 
-                        <SiplaceTable/>
+                        <SiplaceTable
+                            setTopSmtComponents = {setTopSmtComponents}
+                            PCB = {props.PCB}
+                            mfgLine = {props.mfgLine}
+                        />
                     }
                     <h1>THT</h1>
-                    <THTTable/>
+                    <THTTable
+                        setTopThtComponets = {setTopThtComponets}
+                        PCB = {props.PCB}
+                        mfgLine = {props.mfgLine}
+                    />
                     <div className="">
                         <Button
                             className=""

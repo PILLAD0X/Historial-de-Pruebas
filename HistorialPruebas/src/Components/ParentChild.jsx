@@ -11,6 +11,7 @@ const ParentChild = (props)=> {
     const [triggeredBy, setTriggeredBy] = useState('');
     const [pcb, setPcb] = useState('');
     const [technology, setTechnology]= useState ('')
+    const [mfgLine, setMfgLine]= useState ('')
 
     const handleLinkClick = (event, btnclicked, PCB) => {
         event.preventDefault();
@@ -23,24 +24,25 @@ const ParentChild = (props)=> {
 
     const PCBTechnology = (PCB)=>{ //se utilizara para identificar si la placa fue hecha en Siplace o en panasonic y asi poder renderizar la tabla correcta y traer las pruebas.
         //console.log
-        const mfgLine = PCB.substring(17,19)
+        const line = PCB.substring(17,19)
+        setMfgLine(line)
 //        console.log(mfgLine);
-        if (mfgLine == 5){
+        if (line == 5){
             setTechnology('Siplace')            
-        }else if (mfgLine == 7){
+        }else if (line == 7){
             setTechnology('Siplace')            
-        }else if (mfgLine == 8){
+        }else if (line == 8){
             setTechnology('Siplace')            
-        }else if (mfgLine == 9){
+        }else if (line == 9){
             setTechnology('Siplace')            
-        }else if(mfgLine == 10 ){
+        }else if(line == 10 ){
             setTechnology('Siplace')
-        }else if (mfgLine == 11){
+        }else if (line == 11){
             setTechnology('Siplace')    
             console.log('Estamos en la linea');        
-        }else if (mfgLine == 12){
+        }else if (line == 12){
             setTechnology('Siplace')            
-        }else if (mfgLine == 13){
+        }else if (line == 13){
             setTechnology('Siplace')            
         }else{
             setTechnology('Panasonic')
@@ -80,7 +82,7 @@ const ParentChild = (props)=> {
                     </div>
                 </div>
                  
-                <ModalPCBDetail show={showModal} handleClose={handleCloseModal} triggeredBy={triggeredBy} props = {pcb} technology = {technology} />
+                <ModalPCBDetail show={showModal} handleClose={handleCloseModal} triggeredBy = {triggeredBy} technology = {technology} pcb = {pcb} mfgLine = {mfgLine} />
             </div>
         );
     }else { //When we don't have a Top and botton relation for the PCB

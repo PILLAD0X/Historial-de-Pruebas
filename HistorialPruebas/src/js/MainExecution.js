@@ -1,6 +1,6 @@
 import Swal from "sweetalert2";
 import Swal1 from "sweetalert";
-import { GetTestHistory } from "./TestHistory";
+import { GetTestHistory } from "./testHistory";
 import ParseSerialNumberTo23 from "./parseSerialNumber";
 import getMFGYear15LengthCodes from './MFGYear15LengthCodes'
 import { GetGMSerialRelation } from "./GMSerials";
