@@ -7,8 +7,6 @@ const LoadingContext = createContext();
 export const LoadingProvider = ({ children }) => {
   const [loadingPCB, setLoadingPCB] = useState(false);
   const [loadingFA, setLoadingFA] = useState(false);
-  const [loadingSMTTop,setLoadingSMTTop] = useState(false);
-  const [loadingTHT, setLoadingTHT] = useState(false);
   const [loadingSMTBottom, setLoadingSMTBottom] = useState(false); 
 
   return (

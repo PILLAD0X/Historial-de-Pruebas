@@ -15,3 +15,6 @@
 .PCBInf{
     cursor: pointer;
 }
+.containerPCBIcon{
+    display: flex;
+}

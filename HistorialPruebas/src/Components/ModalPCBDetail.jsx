@@ -16,11 +16,11 @@ function ModalPCBDetail({ show, handleClose, triggeredBy, pcb, technology,mfgLin
                 <Modal.Header closeButton>
                     {triggeredBy !== 'Top'  ?
                         <Modal.Title id="example-modal-sizes-title-lg">
-                            Componentes consumidos por numero de serie: {pcb}
+                            Componentes consumidos por numero de serie {pcb} en BSS
                         </Modal.Title>
                     :
                         <Modal.Title id="example-modal-sizes-title-lg">
-                            Componentes consumidos por numero de serie: {pcb}
+                            Componentes consumidos por numero de serie {pcb} en TSS
                         </Modal.Title>
                     }
                 </Modal.Header>

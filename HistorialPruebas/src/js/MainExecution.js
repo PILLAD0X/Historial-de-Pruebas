@@ -83,6 +83,7 @@ export const MainExecution = async (serialNumber, setParentChild, setdetalle70Ba
                 GetTestHistory(parent_pcb_raltion.child, parent_pcb_raltion.mfg_year, "PCB", {setPruebasCodigoNoIdentif, setPruebasFA, setPruebasPCB}, setLoadingPCB, setLoadingFA);
 
                 if (parent_pcb_raltion.parent.length === 15 || parent_pcb_raltion.parent.length === 23) {//IF the parent serial lenght is equal to 15 or 23 we do this. 
+
                     GetTestHistory(parent_pcb_raltion.parent, parent_pcb_raltion.mfg_year, "FA", {setPruebasCodigoNoIdentif, setPruebasFA, setPruebasPCB}, setLoadingPCB, setLoadingFA);
                 } else if (parent_pcb_raltion.parent.length > 23) { //If the 
                   let detail70serial = JSON.parse(ParseSerialNumberTo23(parent_pcb_raltion.parent));

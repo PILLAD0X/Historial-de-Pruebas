@@ -38,8 +38,7 @@ const ParentChild = (props)=> {
         }else if(line == 10 ){
             setTechnology('Siplace')
         }else if (line == 11){
-            setTechnology('Siplace')    
-            console.log('Estamos en la linea');        
+            setTechnology('Siplace')          
         }else if (line == 12){
             setTechnology('Siplace')            
         }else if (line == 13){
@@ -64,12 +63,12 @@ const ParentChild = (props)=> {
                 <div className="">
                     <div className="">
                         <div className="display-container">
-                            <p className='lbspropiedades propiedadesT'> <FiIcons.HiArrowNarrowUp className="iconPCB"/></p>
+                            <p className='lbspropiedades propiedadesT containerPCBIcon'>TSS<FiIcons.HiArrowNarrowUp className="iconPCB"/></p>
                             <a className='lbspropiedadesnum PCBInf' title="Ver componentes" onClick={(e)=> handleLinkClick(e,'Top',props.datos.child)}>{props.datos.child}</a>
                         </div>
                         { props.datos.bsS_Barcode !== ''  ?
                             <div className="display-container">
-                                <p className='lbspropiedades propiedadesT'><FiIcons.HiArrowSmDown className="iconPCB"/></p>
+                                <p className='lbspropiedades propiedadesT containerPCBIcon'>BSS<FiIcons.HiArrowSmDown className="iconPCB"/></p>
                                 <a className='lbspropiedadesnum PCBInf' title="Ver componentes" onClick={(e)=> handleLinkClick(e,'Bottom', props.datos.bsS_Barcode)}>{props.datos.bsS_Barcode}</a>
                             </div>
                         :

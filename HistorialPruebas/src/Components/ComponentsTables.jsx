@@ -7,8 +7,8 @@ import SiplaceTable from "./SiplaceTable";
 import PanasonicTable from "./PanasonicTable";
 import THTTable from "./THTTable";
 const ComponentsTable = ({props}) => {
-    console.log(props);
-    console.log(props.PCB);
+   // console.log(props);
+    //console.log(props.PCB);
     const [topSmtComponents, setTopSmtComponents] = useState([]);
     const [topThtComponents,setTopThtComponets] = useState([]);
     const [bottonSmtComponents, setbottomSmtComponents] = useState([]);
@@ -19,12 +19,9 @@ const ComponentsTable = ({props}) => {
                     <h1>SMT</h1>
                     {props.technology === 'Panasonic' ?
                         <PanasonicTable
-                            setTopSmtComponents = {setTopSmtComponents}
                             PCB = {props.PCB}
-                            mfgLine = {props.mfgLine}
                         />
-                        : 
-
+                    : 
                         <SiplaceTable
                             setTopSmtComponents = {setTopSmtComponents}
                             PCB = {props.PCB}
@@ -35,7 +32,6 @@ const ComponentsTable = ({props}) => {
                     <THTTable
                         setTopThtComponets = {setTopThtComponets}
                         PCB = {props.PCB}
-                        mfgLine = {props.mfgLine}
                     />
                     <div className="">
                         <Button
@@ -53,9 +49,15 @@ const ComponentsTable = ({props}) => {
                 <div className="table-responsive CTitulos ">
                     <h1>SMT</h1>
                     {props.technology === 'Panasonic' ?
-                        <PanasonicTable/>
-                        :
-                        <SiplaceTable/>
+                        <PanasonicTable
+                            PCB = {props.PCB}                        
+                        />
+                    :
+                        <SiplaceTable
+                            setTopSmtComponents = {setTopSmtComponents}
+                            PCB = {props.PCB}
+                            mfgLine = {props.mfgLine}
+                        />
                     }
                     <div className="">
                         <Button
