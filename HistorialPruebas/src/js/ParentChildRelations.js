@@ -24,7 +24,6 @@ export const GetParentChildRelation = async (serialNumber, setParentChild, setLo
             return('No se encontro una relacion entre Parent y Child');
 
         }else{
-            console.log(response.data[0]);
             setParentChild(response.data[0])
             
             return response.data[0];

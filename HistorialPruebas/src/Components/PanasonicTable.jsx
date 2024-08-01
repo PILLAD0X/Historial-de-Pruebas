@@ -8,6 +8,7 @@ import { Button, Form, Spinner } from "react-bootstrap";
 import * as FaIcons from "react-icons/fa";
 
 const PanasonicTable = (props) => {
+    //console.log(props);
     const server = process.env.REACT_APP_SERVER_URL;
     const [componentsdata, setComponentsdata] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
@@ -26,7 +27,6 @@ const PanasonicTable = (props) => {
             try {
                 setLoading(true);
                 const response = await axios.get(`${server}/api/PanasonicComponents?serialnumberP1=${SerialNumberP1}&serialnumberP2=${SerialNumberP2}`);
-                console.log(response.data);
                 if (response.data.length === 0 || response === undefined || response.data[0].parent ==='') {
                     setLoading(false);
                     Swal.fire({
@@ -40,6 +40,12 @@ const PanasonicTable = (props) => {
                 }else{
                     setLoading(false)
                     setComponentsdata(response.data)
+                    
+                    if(props.PCBSide === 'Top'){
+                        props.setTopSmtComponents(response.data)
+                    }else{
+                        props.setbottomSmtComponents(response.data)
+                    }
                 }
             } catch (error) {
                 console.log(error);
@@ -78,7 +84,7 @@ const PanasonicTable = (props) => {
                             className="txtbusquedaComponentes"
                             size="text"
                             type="text"
-                            placeholder="Ingrese Componente o Unique ID"
+                            placeholder="Search Componet Number"
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />

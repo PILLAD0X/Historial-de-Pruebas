@@ -9,17 +9,17 @@ const TablePruebas = (props)=> {
             {props.tableType === 'PCB' & props.infoTestTable !== 0 & props.infoTestTable !== undefined ? 
             (
 
-                <h2 className="espaciadoVertical"> Pruebas PCB </h2>
+                <h2 className="espaciadoVertical"> PCB Tests </h2>
 
             ) : props.tableType === 'FinalAssembly' & props.infoTestTable !== 0 & props.infoTestTable !== undefined ?(
 
 
-                <h2 className="espaciadoVertical">Pruebas Final Assembly</h2>
+                <h2 className="espaciadoVertical">Final Assembly Tests</h2>
             
             
             
             ): props.tableType === 'Others' & props.infoTestTable !== 0 & props.infoTestTable !== undefined ?(
-                <h2 className="espaciadoVertical">Historial de Pruebas</h2>
+                <h2 className="espaciadoVertical">Test History</h2>
             ):(
                 <h6> </h6>
             )}
@@ -195,7 +195,6 @@ const TablePruebas = (props)=> {
                 </table>
                 
             ):(
-
                 <h2 className="espaciadoVertical"> </h2>
             )}
 

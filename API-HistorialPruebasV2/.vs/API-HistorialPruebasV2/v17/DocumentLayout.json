@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Controllers\\GenieController.cs",
               "ToolTip": "C:\\MY SOFTWARE\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Controllers\\GenieController.cs",
               "RelativeToolTip": "Controllers\\GenieController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAQwCgAAAAgAAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAAAYwCgAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-31T01:58:44.143Z",
               "EditorCaption": ""
@@ -47,8 +47,7 @@
               "RelativeToolTip": "Models\\Genie.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T01:58:27.162Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-31T01:58:27.162Z"
             },
             {
               "$type": "Document",
@@ -60,8 +59,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAABAAAAAAAAAAAAAYwB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T02:17:38.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-30T02:17:38.366Z"
             }
           ]
         }

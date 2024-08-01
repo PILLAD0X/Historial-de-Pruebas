@@ -62,19 +62,21 @@ const ParentChild = (props)=> {
                 <p className='lbspropiedades propiedadesT'>PCB: </p>
                 <div className="">
                     <div className="">
+
                         <div className="display-container">
                             <p className='lbspropiedades propiedadesT containerPCBIcon'>TSS<FiIcons.HiArrowNarrowUp className="iconPCB"/></p>
-                            <a className='lbspropiedadesnum PCBInf' title="Ver componentes" onClick={(e)=> handleLinkClick(e,'Top',props.datos.child)}>{props.datos.child}</a>
+                            <a className='lbspropiedadesnum PCBInf' title="Show Components" onClick={(e)=> handleLinkClick(e,'Top',props.datos.child)}>{props.datos.child}</a>
                         </div>
                         { props.datos.bsS_Barcode !== ''  ?
+
                             <div className="display-container">
                                 <p className='lbspropiedades propiedadesT containerPCBIcon'>BSS<FiIcons.HiArrowSmDown className="iconPCB"/></p>
-                                <a className='lbspropiedadesnum PCBInf' title="Ver componentes" onClick={(e)=> handleLinkClick(e,'Bottom', props.datos.bsS_Barcode)}>{props.datos.bsS_Barcode}</a>
+                                <a className='lbspropiedadesnum PCBInf' title="Show Components" onClick={(e)=> handleLinkClick(e,'Bottom', props.datos.bsS_Barcode)}>{props.datos.bsS_Barcode}</a>
                             </div>
                         :
                             <div className="display-container">
-                                <p className='lbspropiedades propiedadesT'><FiIcons.HiArrowSmDown className="iconPCB"/></p>
-                                <p className='lbspropiedades propiedadesT'><FaIcons.FaExclamationTriangle/> Sin Registro de Bottom </p>
+                                <p className='lbspropiedades propiedadesT containerPCBIcon'>BSS<FiIcons.HiArrowSmDown className="iconPCB"/></p>
+                                <p className='lbspropiedades propiedadesT'><FaIcons.FaExclamationTriangle className="iconPCB"/> No Bottom Record.</p>
                             </div>
                         }
 
@@ -88,7 +90,7 @@ const ParentChild = (props)=> {
         return(
             <div className='divProductProperties'>
                 { props.datos === 'No se encontro una relacion entre Parent y Child' ? 
-                <h3><FaIcons.FaExclamationTriangle/>No se encontro una relacion PCB - amplificador para la serie buscada</h3>       
+                <h3><FaIcons.FaExclamationTriangle/>Could not find relationship between PCB and Amplifier</h3>       
                 :
                 <p className='lbspropiedades propiedadesT'><FaIcons.FaDatabase/> AmpRelation:</p>
                 }
@@ -100,7 +102,8 @@ const ParentChild = (props)=> {
                 { props.datos === 'No se encontro una relacion entre Parent y Child'  ?
                     <h6> </h6>
                 :
-                <p className='lbspropiedadesnum'>{props.datos[0].parent}</p>
+                    <a className='lbspropiedadesnum PCBInf' title="Ver componentes" onClick={(e)=> handleLinkClick(e,'Top',props.datos.child)}>{props.datos.child}</a>
+
                 }
                 { props.datos === 'No se encontro una relacion entre Parent y Child'  ?
                     <h6> </h6>

@@ -8,6 +8,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 
 const THTTable = (props) => {
+    //console.log(props);
     const server = process.env.REACT_APP_SERVER_URL;
     const [componentsdata, setComponentsdata] = useState([]);
     const [loadingTHT, setLoadingTHT] = useState(false);    
@@ -35,8 +36,9 @@ const THTTable = (props) => {
                     });
                 }else{
                     //console.log(response.data);
-                    setLoadingTHT(false)
-                    setComponentsdata(response.data)
+                    setLoadingTHT(false);
+                    setComponentsdata(response.data);
+                    props.setTopThtComponets(response.data);
                 }
             } catch (error) {
                 console.log(error);

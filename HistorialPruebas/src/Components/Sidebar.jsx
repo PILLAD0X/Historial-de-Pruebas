@@ -1,6 +1,8 @@
 import React from 'react'; 
 import styled from 'styled-components';
 import * as FaIcons from 'react-icons/fa';
+import * as Fa6Icons from 'react-icons/fa6';
+import * as FcIcons from 'react-icons/fc';
 import { IconContext } from 'react-icons/lib';
 import LogoBose from '../icons/LogoBose';
 import '../styles/Home.css'
@@ -36,7 +38,7 @@ const Sidebar = () => {
         <Nav>
         
           <NavIcon >
-            <h1 className='margen'>Historial de Pruebas </h1>
+            <h1 className='margen'>TJ Genealogy - <Fa6Icons.FaArrowsTurnToDots/> Traceability  & Test History</h1>
             <FaIcons.FaCheck />
           </NavIcon>
           <NavIcon className="logobose">

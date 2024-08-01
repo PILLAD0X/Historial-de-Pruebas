@@ -12,36 +12,40 @@ const SiplaceTable = (props) => {
     const [componentsdata, setComponentsdata] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredData, setFilteredData] = useState([]);
-    const [loadingSMTTop,setLoadingSMTTop] = useState(false);
+    const [loading,setLoading] = useState(false);
     const itemsPerPage = 25; // Cambia esto para ajustar el número de elementos por página
     const { next, prev, currentData, currentPage, maxPage } = usePagination(filteredData, itemsPerPage);
-
+    //console.log(props);
     const GetSiplaceComponents = async(pcb, line) =>{
         // Verificar si ya se tienen los datos para evitar la llamada a la API
         if (componentsdata.length > 0) {
             return;
         }else{
-            //console.log(pcb, line);
             try {
-                setLoadingSMTTop(true);
+                setLoading(true);
                 const response = await axios.get(`${server}/api/siplacecomponents?serialnumber=${pcb}&smtLine=${line}`);
                 if (response.data.length === 0 || response === undefined || response.data[0].parent ==='') {
-                    setLoadingSMTTop(false);
+                    setLoading(false);
                     Swal.fire({
                         position: "center",
                         icon: "warning",
-                        title: `No se encontraron Componentes consumidos por el PCB, ${props.PCB}`,
+                        title: `No se encontraron Componentes consumidos por el PCB, ${props.PCB}.`,
                         showConfirmButton: false,
                         timer: 1400
                     });
         
                 }else{
-                    setLoadingSMTTop(false)
+                    setLoading(false)
                     setComponentsdata(response.data)
+                    if(props.PCBSide === 'Top'){
+                        props.setTopSmtComponents(response.data)
+                    }else{
+                        props.setbottomSmtComponents(response.data)
+                    }
                 }
             } catch (error) {
                 console.log(error);
-                setLoadingSMTTop(false)
+                setLoading(false)
                 throw error;
             }
         }
@@ -65,13 +69,13 @@ const SiplaceTable = (props) => {
         
         <div className="table-responsive CTitulos ">
 
-            {loadingSMTTop === true ? (
+            {loading === true ? (
                 <Spinner id="loading SMT Top" animation="border" className="espaciadoVertical"/>
             ): componentsdata.length === 0 ?
             (
                 <div className="a">
                     <h1><FaIcons.FaExclamationTriangle/></h1>
-                   <h3>No se encontraron componentes consumidos por {props.PCB}</h3>   
+                   <h3>No se encontraron componentes consumidos por {props.PCB} en SMT.</h3>   
                 </div>
             ) : (
                 <div>
@@ -80,7 +84,7 @@ const SiplaceTable = (props) => {
                             className="txtbusquedaComponentes"
                             size="text"
                             type="text"
-                            placeholder="Ingrese Componente o Unique ID"
+                            placeholder="Search Component Number or Unique ID"
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />

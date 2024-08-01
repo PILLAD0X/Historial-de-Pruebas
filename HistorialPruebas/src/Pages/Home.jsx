@@ -66,9 +66,9 @@ const Home = () => {
   };
   //Metodo que sirve para exportar los datos a Excel.
   const exportToExcel = () => {
-    const ws = XLSX.utils.json_to_sheet(pruebasFA);
-    const ws2 = XLSX.utils.json_to_sheet(pruebasPCB);
-    const ws3 = XLSX.utils.json_to_sheet(pruebasCodigoNoIdentif);
+    const ws = Array.isArray(pruebasFA) ? XLSX.utils.json_to_sheet(pruebasFA) : null;
+    const ws2 = Array.isArray(pruebasPCB) ? XLSX.utils.json_to_sheet(pruebasPCB) : null;
+    const ws3 = Array.isArray(pruebasCodigoNoIdentif) ? XLSX.utils.json_to_sheet(pruebasCodigoNoIdentif) : null;
     const wb = XLSX.utils.book_new();
 
     //validamos si existen datos de prueba guardados en las varibles para generar las hojas de excel.
@@ -108,7 +108,7 @@ const Home = () => {
     <div>
       <Sidebar />
       <div className="containerTitulo">
-        <h1>Historial de Pruebas</h1>
+        <h1>Test History</h1>
       </div>
       {/**COMPONENTES PARA LA BUSQUEDA */}
       <div className="container">
@@ -117,7 +117,7 @@ const Home = () => {
             className="txtbusqueda"
             size="text"
             type="text"
-            placeholder="Ingrese codigo a buscar"
+            placeholder="Search Serial Number"
             ref={txtSerialNumber}
             autoFocus
             onKeyDown={handleKeyDown}
@@ -125,7 +125,7 @@ const Home = () => {
           <Button
             variant="primary"
             className="btnbuscar"
-            title="Buscar"
+            title="Search"
             id="input"
             onClick={ejecucion}
           >
@@ -135,7 +135,7 @@ const Home = () => {
         <Button
           variant="primary"
           className="btnlimpiar bg-warning text-dark"
-          title="Limpiar Pantalla"
+          title="Clear"
           onClick={limpiarPantalla}
         >
           <IconLimpiar width={30} height={30} />
@@ -201,11 +201,11 @@ const Home = () => {
           <Button
             className=""
             variant="primary"
-            title="Exportar Datos"
+            title="Export Data"
             id="input"
             onClick={exportToExcel}
           >
-            Descargar Historial de pruebas <FaIcons.FaDownload />
+            Download Test History <FaIcons.FaDownload />
           </Button>
         </div>
       ) : (
