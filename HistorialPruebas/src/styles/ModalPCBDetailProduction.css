@@ -1,0 +1,12 @@
+.TableWhidth{
+    width: 30%;
+    justify-content: center;
+}
+.divTable{
+    display: flex;
+    justify-content: center;
+}
+.Tablecontent{
+    justify-content: center;
+    text-align: center;
+}

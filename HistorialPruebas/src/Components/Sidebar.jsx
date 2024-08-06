@@ -38,7 +38,7 @@ const Sidebar = () => {
         <Nav>
         
           <NavIcon >
-            <h1 className='margen'>TJ Genealogy - <Fa6Icons.FaArrowsTurnToDots/> Traceability  & Test History</h1>
+            <h1 className='margen'>Traceability <Fa6Icons.FaArrowsTurnToDots/>  & Test History</h1>
             <FaIcons.FaCheck />
           </NavIcon>
           <NavIcon className="logobose">

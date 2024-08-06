@@ -101,14 +101,13 @@ const Home = () => {
         `Test history ${pruebasCodigoNoIdentif[0].barcodeSerialNumber}.xlsx`
       ); //Agregar el modelo al nombre del documento.
     }
-    //  XLSX.writeFile(wb, `Historial de Pruebas.xlsx`); //Agregar el modelo al nombre del documento.
   };
 
   return (
     <div>
       <Sidebar />
       <div className="containerTitulo">
-        <h1>Test History</h1>
+      <h1>. </h1>
       </div>
       {/**COMPONENTES PARA LA BUSQUEDA */}
       <div className="container">

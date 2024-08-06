@@ -7,7 +7,14 @@ import usePagination from "./Pagination";
 import { Button, Form, Spinner } from "react-bootstrap";
 import * as FaIcons from "react-icons/fa";
 import * as GiIcons from "react-icons/gi";
+import ModalPCBProductionBy from "./ModalPCBDetailProductionBy";
 const SiplaceTable = (props) => {
+    
+    const [showModal, setShowModal] = useState(false);
+    const [triggeredBy, setTriggeredBy] = useState('');
+    const [SearchCriterial, setSearchCriterial] = useState('');
+    const [component, setComponent] = useState('');
+
     const server = process.env.REACT_APP_SERVER_URL;
     const [componentsdata, setComponentsdata] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
@@ -51,6 +58,7 @@ const SiplaceTable = (props) => {
         }
 
     }
+
     useEffect(() =>{
         GetSiplaceComponents(props.PCB,props.mfgLine);
     },[props.PCB,props.mfgLine]);
@@ -65,6 +73,18 @@ const SiplaceTable = (props) => {
         setFilteredData(results);
     }, [searchTerm, componentsdata]);
 
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
+
+    const handleLinkClick = (event, btnclicked, searchCriterial, component) => {
+        event.preventDefault();
+        setShowModal(true);
+        setTriggeredBy(btnclicked);
+        setSearchCriterial(searchCriterial)
+        setComponent(component)
+        //console.log('CLick');
+    };
     return (
         
         <div className="table-responsive CTitulos ">
@@ -104,10 +124,10 @@ const SiplaceTable = (props) => {
                                 <th>Location</th>
                                 <th>Packaging Unit</th>
                                 <th>Schematic</th>
-                                <th>Packaging Unique</th>
+                                <th>Unique ID</th>
                                 <th>Component Number</th>
                                 <th>Lot Vendor</th>
-                                <th>Supplier</th>
+                                <th>Vendor</th>
                                 <th>Feader Number</th>
                                 <th>Feader Side</th>
                                 <th>Board Side</th>
@@ -121,9 +141,9 @@ const SiplaceTable = (props) => {
                                     <td>{components.locationId}</td>
                                     <td>{components.packagingUnitId}</td>
                                     <td>{components.schematic}</td>
-                                    <td>{components.packagingUniqueId}</td>
+                                    <td><a href="#" title="Show PCBs creared by this Unique ID" key={components.smtTraceabilityId} onClick={(e)=> handleLinkClick(e,'UID',components.packagingUniqueId,components.rawComponentBarcode)}>{components.packagingUniqueId}</a></td>
                                     <td>{components.rawComponentBarcode}</td>
-                                    <td>{components.lotVendor}</td>
+                                    <td><a href="#" title="Show PCBs creared by this Lot" key={components.smtTraceabilityId} onClick={(e)=> handleLinkClick(e, 'Lot',components.lotVendor,components.rawComponentBarcode)}>{components.lotVendor}</a></td>
                                     <td>{components.supplier}</td>
                                     <td>{components.fdrNumber}</td>
                                     <td>{components.fdrSide}</td>
@@ -149,7 +169,8 @@ const SiplaceTable = (props) => {
                             Page {currentPage} of {maxPage}
                         </div>
                     </div>
-            </div>
+                    <ModalPCBProductionBy show={showModal} handleClose={handleCloseModal} triggeredBy = {triggeredBy} searchCriterial = {SearchCriterial} component={component}/>
+                </div>
             )}
 
 

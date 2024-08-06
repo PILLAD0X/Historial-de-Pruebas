@@ -102,11 +102,10 @@ const PanasonicTable = (props) => {
                         <thead className="table-dark CTitulos">
                             <tr key={componentsdata.SmtTraceabilityPanasonicId}>
                                 <th>Serial Number</th>
-                                <th>Reel Id</th>
                                 <th>Part No</th>
-                                <th>Vendor No</th>
-                                <th>Lot No</th>
-                                <th>Reel Serial</th>
+                                <th>Vendor</th>
+                                <th>Lot Vendor</th>
+                                <th>Unique ID</th>
                                 <th>Date Time</th>
                             </tr>
                         </thead>
@@ -114,7 +113,6 @@ const PanasonicTable = (props) => {
                             {currentData().map((components) => (
                                 <tr>
                                     <td>{components.barcode}</td>
-                                    <td>{components.reelId}</td>
                                     <td>{components.partNo}</td>
                                     <td>{components.vendorNo}</td>
                                     <td>{components.lotNo}</td>
