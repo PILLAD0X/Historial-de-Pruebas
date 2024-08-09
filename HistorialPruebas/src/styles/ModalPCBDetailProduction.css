@@ -4,7 +4,10 @@
 }
 .divTable{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    
+    align-items: center;
 }
 .Tablecontent{
     justify-content: center;

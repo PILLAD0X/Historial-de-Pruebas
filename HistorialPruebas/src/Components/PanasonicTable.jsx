@@ -6,6 +6,8 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { Button, Form, Spinner } from "react-bootstrap";
 import * as FaIcons from "react-icons/fa";
+import * as GiIcons from "react-icons/gi";
+import ModalPCBProductionBy from "./ModalPCBDetailProductionBy";
 
 const PanasonicTable = (props) => {
     //console.log(props);
@@ -16,6 +18,12 @@ const PanasonicTable = (props) => {
     const [loading,setLoading] = useState(false);
     const itemsPerPage = 25; // Cambia esto para ajustar el número de elementos por página
     const { next, prev, currentData, currentPage, maxPage } = usePagination(filteredData, itemsPerPage);
+
+    //Variables to Modal PCBS manufactured by
+    const [showModal, setShowModal] = useState(false);
+    const [triggeredBy, setTriggeredBy] = useState('');
+    const [SearchCriterial, setSearchCriterial] = useState('');
+    const [component, setComponent] = useState('');
 
     const GetPanasonicComponents = async(pcb) => {
         // Verificar si ya se tienen los datos para evitar la llamada a la API
@@ -67,6 +75,20 @@ const PanasonicTable = (props) => {
         );
         setFilteredData(results);
     }, [searchTerm, componentsdata]);
+
+    //MODAL PCBS manufactured by Lot / UID
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
+
+    const handleLinkClick = (event, btnclicked, searchCriterial, component) => {
+        event.preventDefault();
+        setShowModal(true);
+        setTriggeredBy(btnclicked);
+        setSearchCriterial(searchCriterial)
+        setComponent(component)
+        //console.log('CLick');
+    };
     return (
         <div className="table-responsive CTitulos ">
             {loading=== true ? (
@@ -111,17 +133,34 @@ const PanasonicTable = (props) => {
                         </thead>
                         <tbody>
                             {currentData().map((components) => (
-                                <tr>
+                                <tr key={componentsdata.SmtTraceabilityPanasonicId}>
                                     <td>{components.barcode}</td>
                                     <td>{components.partNo}</td>
                                     <td>{components.vendorNo}</td>
-                                    <td>{components.lotNo}</td>
-                                    <td>{components.reelBarcode}</td>
+                                    <td><a href="#" title="Show PCBs creared by this Unique ID" key={componentsdata.SmtTraceabilityPanasonicId} onClick={(e)=> handleLinkClick(e,'Lot',components.lotNo,components.partNo)}>{components.lotNo}</a></td>
+                                    <td><a href="#" title="Show PCBs creared by this Unique ID" key={componentsdata.SmtTraceabilityPanasonicId} onClick={(e)=> handleLinkClick(e,'UID',components.reelBarcode,components.partNo)}>{components.reelBarcode}</a></td>
                                     <td>{components.createTime}</td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
+                    
+                    <div>
+                        <Button 
+                        onClick={prev} 
+                        disabled={currentPage === 1}>
+                            
+                            <FaIcons.FaStepBackward/>
+                        </Button>
+                        <Button onClick={next} disabled={currentPage === maxPage}>
+                            <GiIcons.GiNextButton/>
+                        </Button>
+                        <div>
+                            Page {currentPage} of {maxPage}
+                        </div>
+                        <h3>Found SMT components: {componentsdata.length}</h3>
+                    </div>
+                    <ModalPCBProductionBy show={showModal} handleClose={handleCloseModal} triggeredBy = {triggeredBy} searchCriterial = {SearchCriterial} component={component}/>
                 </div>
             )}
         </div>

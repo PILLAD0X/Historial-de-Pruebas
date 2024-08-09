@@ -6,6 +6,7 @@ import * as FaIcons from "react-icons/fa";
 import usePagination from "./Pagination";
 import axios from "axios";
 import Swal from "sweetalert2";
+import ModalPCBProductionBy from "./ModalPCBDetailProductionBy";
 
 const THTTable = (props) => {
     //console.log(props);
@@ -14,8 +15,15 @@ const THTTable = (props) => {
     const [loadingTHT, setLoadingTHT] = useState(false);    
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredData, setFilteredData] = useState([]);
-    const itemsPerPage = 50; // Cambia esto para ajustar el número de elementos por página
+    const itemsPerPage = 200; // Cambia esto para ajustar el número de elementos por página
     const {currentData} = usePagination(filteredData, itemsPerPage);
+
+    //Variables para Modal de PCBS segun algun dato de la tabla:
+    const [showModal, setShowModal] = useState(false);
+    const [triggeredBy, setTriggeredBy] = useState('');
+    const [SearchCriterial, setSearchCriterial] = useState('');
+    const [component, setComponent] = useState('');
+
 
     const GetTHTComponents = async(pcb) =>{ 
         const mfgYear = pcb.slice(1,2)
@@ -65,6 +73,20 @@ const THTTable = (props) => {
         setFilteredData(results);
     }, [searchTerm, componentsdata]);
     
+    //Metodos para el modal segun UID o Lot
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
+
+    const handleLinkClick = (event, btnclicked, searchCriterial, component) => {
+        event.preventDefault();
+        setShowModal(true);
+        setTriggeredBy(btnclicked);
+        setSearchCriterial(searchCriterial)
+        setComponent(component)
+        //console.log('CLick');
+    };
+
     return (
         <div className="table-responsive CTitulos ">
             {loadingTHT === true ? (
@@ -91,17 +113,21 @@ const THTTable = (props) => {
                         {
                             currentData().map((components) => (
                                 <tr id={components.idHistory}>
-                                    <th>{components.serialNumber}</th>
-                                    <th>{components.mid}</th>
-                                    <th>{components.lot_vendor}</th>
-                                    <th>{components.partNumber}</th>
-                                    <th>{components.linea}</th>
-                                    <th>{components.timeSpan}</th>
+                                    <td>{components.serialNumber}</td>
+                                    <td>{components.mid}</td>
+                                    <td>{components.lot_vendor}</td> 
+                                    <td>{components.partNumber}</td>
+                                    <td>{components.linea}</td>
+                                    <td>{components.timeSpan}</td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
+                    
+                    <h3>Found THT components: {componentsdata.length}</h3>
+                    <ModalPCBProductionBy show={showModal} handleClose={handleCloseModal} triggeredBy = {triggeredBy} searchCriterial = {SearchCriterial} component={component}/>
                 </div>
+                
             )}
 
 

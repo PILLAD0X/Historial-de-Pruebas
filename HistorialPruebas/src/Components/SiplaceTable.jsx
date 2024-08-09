@@ -168,6 +168,7 @@ const SiplaceTable = (props) => {
                         <div>
                             Page {currentPage} of {maxPage}
                         </div>
+                        <h3>Found SMT components: {componentsdata.length}</h3>
                     </div>
                     <ModalPCBProductionBy show={showModal} handleClose={handleCloseModal} triggeredBy = {triggeredBy} searchCriterial = {SearchCriterial} component={component}/>
                 </div>
