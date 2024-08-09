@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react"; 
+import React, { useRef, useState } from "react";
 import { Button, Spinner, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/Home.css";
@@ -12,8 +12,8 @@ import DetalleCodigo from "../Components/DetalleCodigo";
 import IconLimpiar from "../icons/IconLimpiar";
 
 // nuevos imports en el proceso de modularizacion
-import { MainExecution} from "../js/MainExecution";
-import {useLoading} from '../js/LoadingContext'
+import { MainExecution } from "../js/MainExecution";
+import { useLoading } from "../js/LoadingContext";
 
 const Home = () => {
   //VARIBALES PARA exportar a excel
@@ -21,18 +21,27 @@ const Home = () => {
   const [pruebasFA, setPruebasFA] = useState([]);
   const [pruebasCodigoNoIdentif, setPruebasCodigoNoIdentif] = useState([]);
   const [parentChild, setParentChild] = useState([]); //variable donde recibimos la relacion de parent y child
-  
+
   const [detalle70Barcode, setdetalle70Barcode] = useState([]); // variable para el desglose de la conversion a series de 70, 23, 15.
   const txtSerialNumber = useRef(); //variable para tomar lo escrito en el input de la serie
-  const { loadingPCB, setLoadingPCB, loadingFA, setLoadingFA  } = useLoading();
-
+  const { loadingPCB, setLoadingPCB, loadingFA, setLoadingFA } = useLoading();
 
   const handleGetParetChild = (serialNumber) => {
-    MainExecution(serialNumber, setParentChild, setdetalle70Barcode, setPruebasCodigoNoIdentif,setPruebasFA, setPruebasPCB, setLoadingPCB, setLoadingFA,  parentChild);    
-  };  
-  
+    MainExecution(
+      serialNumber,
+      setParentChild,
+      setdetalle70Barcode,
+      setPruebasCodigoNoIdentif,
+      setPruebasFA,
+      setPruebasPCB,
+      setLoadingPCB,
+      setLoadingFA,
+      parentChild
+    );
+  };
+
   // metodo llamado que desencadena la ejecucion
-  const ejecucion = async ()=> {
+  const ejecucion = async () => {
     const serialNumber = txtSerialNumber.current.value;
 
     if (serialNumber !== "" && serialNumber !== null) {
@@ -41,7 +50,7 @@ const Home = () => {
       setLoadingPCB(true);
       setLoadingFA(true);
       handleGetParetChild(serialNumber);
-    }else {
+    } else {
       // cuando se recibe un valor vacio.
     }
   };
@@ -66,9 +75,15 @@ const Home = () => {
   };
   //Metodo que sirve para exportar los datos a Excel.
   const exportToExcel = () => {
-    const ws = Array.isArray(pruebasFA) ? XLSX.utils.json_to_sheet(pruebasFA) : null;
-    const ws2 = Array.isArray(pruebasPCB) ? XLSX.utils.json_to_sheet(pruebasPCB) : null;
-    const ws3 = Array.isArray(pruebasCodigoNoIdentif) ? XLSX.utils.json_to_sheet(pruebasCodigoNoIdentif) : null;
+    const ws = Array.isArray(pruebasFA)
+      ? XLSX.utils.json_to_sheet(pruebasFA)
+      : null;
+    const ws2 = Array.isArray(pruebasPCB)
+      ? XLSX.utils.json_to_sheet(pruebasPCB)
+      : null;
+    const ws3 = Array.isArray(pruebasCodigoNoIdentif)
+      ? XLSX.utils.json_to_sheet(pruebasCodigoNoIdentif)
+      : null;
     const wb = XLSX.utils.book_new();
 
     //validamos si existen datos de prueba guardados en las varibles para generar las hojas de excel.
@@ -107,7 +122,7 @@ const Home = () => {
     <div>
       <Sidebar />
       <div className="containerTitulo">
-      <h1>. </h1>
+        <h1>. </h1>
       </div>
       {/**COMPONENTES PARA LA BUSQUEDA */}
       <div className="container">
@@ -141,7 +156,7 @@ const Home = () => {
         </Button>
       </div>
 
-    {/** DATOS RELACIONADOS AL PARENT Y CHILD */}
+      {/** DATOS RELACIONADOS AL PARENT Y CHILD */}
       {parentChild.length === 0 ? (
         <h6> </h6>
       ) : (
@@ -155,25 +170,29 @@ const Home = () => {
         <DetalleCodigo datos={detalle70Barcode} />
       )}
 
-  
-
       {loadingPCB && pruebasPCB.length === 0 ? (
-        <Spinner id="loading PCB info" animation="border" className="espaciadoVertical" />
+        <Spinner
+          id="loading PCB info"
+          animation="border"
+          className="espaciadoVertical"
+        />
       ) : (
         <h6> </h6>
       )}
 
       {/**TABLA EN CASO DE PCB */}
-      {pruebasPCB.length > 0 || pruebasPCB.length ==undefined ? (
+      {pruebasPCB.length > 0 || pruebasPCB.length == undefined ? (
         <TestTable tableType={"PCB"} infoTestTable={pruebasPCB} />
-
       ) : (
         <h6></h6>
       )}
 
-
       {loadingFA === true && pruebasFA.length === 0 ? (
-        <Spinner id="loading FA info" animation="border" className="espaciadoVertical" />
+        <Spinner
+          id="loading FA info"
+          animation="border"
+          className="espaciadoVertical"
+        />
       ) : (
         <h6> </h6>
       )}
@@ -189,7 +208,10 @@ const Home = () => {
       {pruebasCodigoNoIdentif.length === 0 ? (
         <h6> </h6>
       ) : (
-        <TestTable tableType={"Others"} infoTestTable={pruebasCodigoNoIdentif} />
+        <TestTable
+          tableType={"Others"}
+          infoTestTable={pruebasCodigoNoIdentif}
+        />
       )}
 
       {/** BOTON PARA DESCARGAR LA INFORMACION*/}

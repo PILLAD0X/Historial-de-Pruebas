@@ -1,20 +1,20 @@
-import React from 'react'; 
-import styled from 'styled-components';
-import * as FaIcons from 'react-icons/fa';
-import * as Fa6Icons from 'react-icons/fa6';
-import * as FcIcons from 'react-icons/fc';
-import { IconContext } from 'react-icons/lib';
-import LogoBose from '../icons/LogoBose';
-import '../styles/Home.css'
+import React from "react";
+import styled from "styled-components";
+import * as FaIcons from "react-icons/fa";
+import * as Fa6Icons from "react-icons/fa6";
+import * as FcIcons from "react-icons/fc";
+import { IconContext } from "react-icons/lib";
+import LogoBose from "../icons/LogoBose";
+import "../styles/Home.css";
 const Nav = styled.div`
   background: #15171c;
   height: 80px;
   font-family: sans-serif;
-  position:fixed;
-  top:0;
-  width:100%;
-  box-shadow: rgba(100,100,111,1) 0px 7px 29px 0px;
-  
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: rgba(100, 100, 111, 1) 0px 7px 29px 0px;
+
   display: flex;
 `;
 
@@ -25,24 +25,22 @@ const NavIcon = styled.div`
   display: flex;
   align-items: center;
   color: #fff;
-  width:100%;
+  width: 100%;
 `;
 
-
 const Sidebar = () => {
-
-
   return (
     <>
-      <IconContext.Provider value={{ color: '#fff' }}>
+      <IconContext.Provider value={{ color: "#fff" }}>
         <Nav>
-        
-          <NavIcon >
-            <h1 className='margen'>Traceability <Fa6Icons.FaArrowsTurnToDots/>  & Test History</h1>
+          <NavIcon>
+            <h1 className="margen">
+              Traceability <Fa6Icons.FaArrowsTurnToDots /> & Test History
+            </h1>
             <FaIcons.FaCheck />
           </NavIcon>
           <NavIcon className="logobose">
-            <LogoBose  fill='#fff' width={200} height={200}/>
+            <LogoBose fill="#fff" width={200} height={200} />
           </NavIcon>
         </Nav>
       </IconContext.Provider>

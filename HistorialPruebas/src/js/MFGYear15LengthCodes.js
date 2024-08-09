@@ -1,6 +1,5 @@
-
 //import {getLoadingFAData,setLoadingFAData,} from '../Components/loadingState'
-const Swal = require('sweetalert2');
+const Swal = require("sweetalert2");
 const getCurrentYear = () => new Date().getFullYear();
 
 const generateYearOptions = () => {
@@ -20,16 +19,15 @@ const getMFGYear15LengthCodes = async () => {
     title: "Seleccione año de Manufactura",
     input: "select",
     inputOptions: {
-      Years: generateYearOptions()
+      Years: generateYearOptions(),
     },
     inputPlaceholder: "Seleccione año",
-    showCancelButton: true
+    showCancelButton: true,
   });
-  
+
   if (MfgYears) {
-    const MFGYidentifier= MfgYears.toString().slice(-1)
+    const MFGYidentifier = MfgYears.toString().slice(-1);
     return MFGYidentifier;
-   
   }
 };
 

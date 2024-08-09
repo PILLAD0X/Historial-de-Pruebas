@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext } from "react";
 
 // Crear el contexto
 const LoadingContext = createContext();
@@ -7,10 +7,12 @@ const LoadingContext = createContext();
 export const LoadingProvider = ({ children }) => {
   const [loadingPCB, setLoadingPCB] = useState(false);
   const [loadingFA, setLoadingFA] = useState(false);
-  const [loadingSMTBottom, setLoadingSMTBottom] = useState(false); 
+  const [loadingSMTBottom, setLoadingSMTBottom] = useState(false);
 
   return (
-    <LoadingContext.Provider value={{ loadingPCB, setLoadingPCB, loadingFA, setLoadingFA }}>
+    <LoadingContext.Provider
+      value={{ loadingPCB, setLoadingPCB, loadingFA, setLoadingFA }}
+    >
       {children}
     </LoadingContext.Provider>
   );
