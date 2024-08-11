@@ -153,7 +153,7 @@ const SiplaceTable = (props) => {
                   <td>{components.schematic}</td>
                   <td>
                     <a
-                      href="#"
+                      href="/#"
                       title="Show PCBs creared by this Unique ID"
                       key={components.smtTraceabilityId}
                       onClick={(e) =>
@@ -171,7 +171,7 @@ const SiplaceTable = (props) => {
                   <td>{components.rawComponentBarcode}</td>
                   <td>
                     <a
-                      href="#"
+                      href="/#"
                       title="Show PCBs creared by this Lot"
                       key={components.smtTraceabilityId}
                       onClick={(e) =>

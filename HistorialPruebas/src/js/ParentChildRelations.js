@@ -14,11 +14,7 @@ export const GetParentChildRelation = async (
       `${server}/api/ParentChildRelation?serialNumber=${serialNumber}`
     );
 
-    if (
-      response.data.length === 0 ||
-      response === undefined ||
-      response.data[0].parent === ""
-    ) {
+    if (response.data[0].parent === "" && response.data[0].child === "") {
       setParentChild("No se encontro una relacion entre Parent y Child");
       //"success", "error", "warning", "info"
       Swal.fire({
@@ -31,6 +27,22 @@ export const GetParentChildRelation = async (
       setLoadingPCB(false);
 
       return "No se encontro una relacion entre Parent y Child";
+    } else if (
+      response.data[0].parent === "" &&
+      response.data[0].child !== ""
+    ) {
+      setParentChild(response.data[0]);
+      //"success", "error", "warning", "info"
+      Swal.fire({
+        position: "center",
+        icon: "warning",
+        title: "El PCB aun no se ensambla en un Amplificador",
+        showConfirmButton: false,
+        timer: 3000,
+      });
+      setLoadingPCB(false);
+
+      return "El PCB aun no se ensambla en un Amplificador";
     } else {
       setParentChild(response.data[0]);
 
@@ -42,32 +54,3 @@ export const GetParentChildRelation = async (
     throw error;
   }
 };
-/*
-const PcbTopBottomRelation = async (serialNumber, setParentChild) => { 
-    const mfgYear = serialNumber.substring(1,2);
-    const serialP1 = serialNumber.substring(0,9);
-    const serialP2 = serialNumber.substring(11,23);
-   // F3354069701832255113050
-    //console.log('SerialP1: '+serialP1+' SerialP2: '+serialP2);
-    try {
-        
-        //  console.log(`${server}/api/PcbRelation?serialP1=${serialP1}&serialP2=${serialP2}&year=${mfgYear}`);
-        const response = await axios.get(`${server}/api/PcbRelation?serialP1=${serialP1}&serialP2=${serialP2}&year=${mfgYear}`)
-       // console.log(response);
-
-        if (response.data.length === 0 || response === undefined) {
-            console.log("No hay datos de TSS BSS");
-            return "End process"
-
-        }else{
-            //return response.data[0];
-            console.log("SI hay datos de TSS BSS: ", response.data[0]);
-            setParentChild((prevParentChildInfo) => [...prevParentChildInfo, response.data[0]])
-        }
-    } catch (error) {
-        console.log(error);
-        throw error;
-    }
-
-}
-*/

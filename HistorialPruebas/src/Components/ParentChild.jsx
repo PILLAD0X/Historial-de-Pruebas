@@ -53,7 +53,78 @@ const ParentChild = (props) => {
     setShowModal(false);
   };
 
-  if (props.datos !== "No se encontro una relacion entre Parent y Child") {
+  if (props.datos.parent === "" && props.datos.child !== "") {
+    // Cuando hay TSS y BSS pero no Parent
+    return (
+      <div className="divProductProperties">
+        <p className="lbspropiedades propiedadesT">
+          <FmIcons.MdCloseFullscreen /> AmpRelation:
+        </p>
+        <p className="lbspropiedades propiedadesT">Amplifier:</p>
+        <p className="lbspropiedadesnum">The PCB isn't assembly yet.</p>
+        <p className="lbspropiedades propiedadesT">PCB: </p>
+        <div className="">
+          <div className="">
+            <div className="display-container">
+              <p className="lbspropiedades propiedadesT containerPCBIcon">
+                TSS
+                <FiIcons.HiArrowNarrowUp className="iconPCB" />
+              </p>
+              <a
+                href="/#"
+                className="lbspropiedadesnum PCBInf"
+                title="Show Components"
+                onClick={(e) => handleLinkClick(e, "Top", props.datos.child)}
+              >
+                {props.datos.child}
+              </a>
+            </div>
+            {props.datos.bsS_Barcode !== "" ? (
+              <div className="display-container">
+                <p className="lbspropiedades propiedadesT containerPCBIcon">
+                  BSS
+                  <FiIcons.HiArrowSmDown className="iconPCB" />
+                </p>
+                <a
+                  href="/#"
+                  className="lbspropiedadesnum PCBInf"
+                  title="Show Components"
+                  onClick={(e) =>
+                    handleLinkClick(e, "Bottom", props.datos.bsS_Barcode)
+                  }
+                >
+                  {props.datos.bsS_Barcode}
+                </a>
+              </div>
+            ) : (
+              <div className="display-container">
+                <p className="lbspropiedades propiedadesT containerPCBIcon">
+                  BSS
+                  <FiIcons.HiArrowSmDown className="iconPCB" />
+                </p>
+                <p className="lbspropiedades propiedadesT">
+                  <FaIcons.FaExclamationTriangle className="iconPCB" /> No
+                  Bottom Record.
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+
+        <ModalPCBDetail
+          show={showModal}
+          handleClose={handleCloseModal}
+          triggeredBy={triggeredBy}
+          technology={technology}
+          pcb={pcb}
+          mfgLine={mfgLine}
+        />
+      </div>
+    );
+  } else if (
+    props.datos !== "No se encontro una relacion entre Parent y Child"
+  ) {
+    // Cuando hay parent-child
     return (
       <div className="divProductProperties">
         <p className="lbspropiedades propiedadesT">

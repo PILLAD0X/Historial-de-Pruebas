@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("API-HistorialPruebasV2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b8198079f8b6a15b0576baae78a36eecf129811")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0cfb86f11f713473b85edee8dd7240014a765f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("API-HistorialPruebasV2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("API-HistorialPruebasV2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

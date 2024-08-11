@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Historial-pruebas/static/css/main.1e5712e7.css",
+    "main.js": "/Historial-pruebas/static/js/main.41253d96.js",
+    "index.html": "/Historial-pruebas/index.html",
+    "main.1e5712e7.css.map": "/Historial-pruebas/static/css/main.1e5712e7.css.map",
+    "main.41253d96.js.map": "/Historial-pruebas/static/js/main.41253d96.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1e5712e7.css",
+    "static/js/main.41253d96.js"
+  ]
+}

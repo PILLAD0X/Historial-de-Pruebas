@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\MY SOFTWARE\\Historial-de-Pruebas\\API-HistorialPruebasV2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|c:\\my software\\historial-de-pruebas\\api-historialpruebasv2\\controllers\\geniecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|solutionrelative:controllers\\geniecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|c:\\my software\\historial-de-pruebas\\api-historialpruebasv2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|c:\\my software\\historial-de-pruebas\\api-historialpruebasv2\\controllers\\pcbsmanufacturedbylotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|solutionrelative:controllers\\pcbsmanufacturedbylotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|c:\\my software\\historial-de-pruebas\\api-historialpruebasv2\\api-historialpruebasv2.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|solutionrelative:api-historialpruebasv2.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|c:\\my software\\historial-de-pruebas\\api-historialpruebasv2\\controllers\\pcbsmanufacturedbyuidcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|solutionrelative:controllers\\pcbsmanufacturedbyuidcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|c:\\my software\\historial-de-pruebas\\api-historialpruebasv2\\controllers\\pcbsthtbylotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|solutionrelative:controllers\\pcbsthtbylotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|c:\\my software\\historial-de-pruebas\\api-historialpruebasv2\\controllers\\pcbsthtbymidcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|solutionrelative:controllers\\pcbsthtbymidcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|c:\\my software\\historial-de-pruebas\\api-historialpruebasv2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E6A34DFD-20BA-4ABF-8488-1021BB05A19E}|API-HistorialPruebasV2.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,66 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GenieController.cs",
-              "DocumentMoniker": "C:\\MY SOFTWARE\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Controllers\\GenieController.cs",
-              "RelativeDocumentMoniker": "Controllers\\GenieController.cs",
-              "ToolTip": "C:\\MY SOFTWARE\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Controllers\\GenieController.cs",
-              "RelativeToolTip": "Controllers\\GenieController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\MY SOFTWARE\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\MY SOFTWARE\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T23:31:08.71Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PcbsTHTByLotController.cs",
-              "DocumentMoniker": "C:\\MY SOFTWARE\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Controllers\\PcbsTHTByLotController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PcbsTHTByLotController.cs",
-              "ToolTip": "C:\\MY SOFTWARE\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Controllers\\PcbsTHTByLotController.cs",
-              "RelativeToolTip": "Controllers\\PcbsTHTByLotController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T15:00:38.245Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PcbsTHTByMIDController.cs",
-              "DocumentMoniker": "C:\\MY SOFTWARE\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Controllers\\PcbsTHTByMIDController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PcbsTHTByMIDController.cs",
-              "ToolTip": "C:\\MY SOFTWARE\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Controllers\\PcbsTHTByMIDController.cs",
-              "RelativeToolTip": "Controllers\\PcbsTHTByMIDController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T15:00:33.477Z",
+              "WhenOpened": "2024-08-09T20:51:13.809Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PcbsManufacturedByLotController.cs",
-              "DocumentMoniker": "C:\\MY SOFTWARE\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Controllers\\PcbsManufacturedByLotController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PcbsManufacturedByLotController.cs",
-              "ToolTip": "C:\\MY SOFTWARE\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Controllers\\PcbsManufacturedByLotController.cs",
-              "RelativeToolTip": "Controllers\\PcbsManufacturedByLotController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwB8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T14:59:26.547Z",
+              "Title": "API-HistorialPruebasV2.http",
+              "DocumentMoniker": "C:\\MY SOFTWARE\\Historial-de-Pruebas\\API-HistorialPruebasV2\\API-HistorialPruebasV2.http",
+              "RelativeDocumentMoniker": "API-HistorialPruebasV2.http",
+              "ToolTip": "C:\\MY SOFTWARE\\Historial-de-Pruebas\\API-HistorialPruebasV2\\API-HistorialPruebasV2.http",
+              "RelativeToolTip": "API-HistorialPruebasV2.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-08-09T20:48:13.911Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PcbsManufacturedByUIDController.cs",
-              "DocumentMoniker": "C:\\MY SOFTWARE\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Controllers\\PcbsManufacturedByUIDController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PcbsManufacturedByUIDController.cs",
-              "ToolTip": "C:\\MY SOFTWARE\\Historial-de-Pruebas\\API-HistorialPruebasV2\\Controllers\\PcbsManufacturedByUIDController.cs",
-              "RelativeToolTip": "Controllers\\PcbsManufacturedByUIDController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACAAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-06T01:43:25.72Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\MY SOFTWARE\\Historial-de-Pruebas\\API-HistorialPruebasV2\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\MY SOFTWARE\\Historial-de-Pruebas\\API-HistorialPruebasV2\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-09T20:47:44.85Z",
               "EditorCaption": ""
             }
           ]

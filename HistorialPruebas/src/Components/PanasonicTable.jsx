@@ -151,7 +151,7 @@ const PanasonicTable = (props) => {
                   <td>{components.vendorNo}</td>
                   <td>
                     <a
-                      href="#"
+                      href="/#"
                       title="Show PCBs creared by this Unique ID"
                       key={componentsdata.SmtTraceabilityPanasonicId}
                       onClick={(e) =>
@@ -168,7 +168,7 @@ const PanasonicTable = (props) => {
                   </td>
                   <td>
                     <a
-                      href="#"
+                      href="/#"
                       title="Show PCBs creared by this Unique ID"
                       key={componentsdata.SmtTraceabilityPanasonicId}
                       onClick={(e) =>

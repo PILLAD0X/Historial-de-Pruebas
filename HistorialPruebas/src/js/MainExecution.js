@@ -6,9 +6,6 @@ import getMFGYear15LengthCodes from "./MFGYear15LengthCodes";
 import { GetGMSerialRelation } from "./GMSerials";
 import { GetParentChildRelation } from "./ParentChildRelations";
 
-// Aquí declaramos la variable server y la obtenemos de las variables de entorno
-const server = process.env.REACT_APP_SERVER_URL;
-
 export const MainExecution = async (
   serialNumber,
   setParentChild,
@@ -17,8 +14,7 @@ export const MainExecution = async (
   setPruebasFA,
   setPruebasPCB,
   setLoadingPCB,
-  setLoadingFA,
-  parentChild
+  setLoadingFA
 ) => {
   //const {setLoadingPCB, setLoadingFA} = useLoading();
   if (
@@ -130,17 +126,23 @@ export const MainExecution = async (
         }
       } else {
         //When the parent-child relationship exist.
-
-        GetTestHistory(
-          parent_pcb_raltion.child,
-          parent_pcb_raltion.mfg_year,
-          "PCB",
-          { setPruebasCodigoNoIdentif, setPruebasFA, setPruebasPCB },
-          setLoadingPCB,
-          setLoadingFA
-        );
-
         if (
+          parent_pcb_raltion !== "El PCB aun no se ensambla en un Amplificador"
+        ) {
+          GetTestHistory(
+            parent_pcb_raltion.child,
+            parent_pcb_raltion.mfg_year,
+            "PCB",
+            { setPruebasCodigoNoIdentif, setPruebasFA, setPruebasPCB },
+            setLoadingPCB,
+            setLoadingFA
+          );
+        }
+        if (
+          parent_pcb_raltion === "El PCB aun no se ensambla en un Amplificador"
+        ) {
+          setLoadingFA(false);
+        } else if (
           parent_pcb_raltion.parent.length === 15 ||
           parent_pcb_raltion.parent.length === 23
         ) {
