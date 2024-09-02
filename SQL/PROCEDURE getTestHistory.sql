@@ -8,7 +8,7 @@ CREATE PROCEDURE getTestHistory(
 )
 AS
 BEGIN
-	IF(@year = 0)
+		IF(@year = 0)
 		BEGIN
 			SELECT * FROM TesterLogInformationArchive_2020  WITH (NOLOCK) WHERE BarcodeSerialNumber=@numSerie
 		END
@@ -24,11 +24,12 @@ BEGIN
 		END
 	ELSE IF(@year = 3)
 		BEGIN
-			SELECT * FROM TesterLogInformation WITH (NOLOCK) WHERE BarcodeSerialNumber=@numSerie UNION 
+			SELECT * FROM [CTRv2].[dbo].[TesterLogInformationArchive_2023] WITH (NOLOCK) WHERE BarcodeSerialNumber = @numSerie UNION
 			SELECT * FROM [CTRTemporal].[dbo].[TesterLogInformationArchive_2013] WITH (NOLOCK) WHERE BarcodeSerialNumber=@numSerie
 		END
 	ELSE IF(@year = 4)
 		BEGIN
+			SELECT * FROM TesterLogInformationArchive WITH (NOLOCK) WHERE BarcodeSerialNumber=@numSerie UNION 
 			SELECT * FROM [CTRTemporal].[dbo].[TesterLogInformationArchive_2014] WITH (NOLOCK) WHERE BarcodeSerialNumber=@numSerie
 		END
 	ELSE IF(@year = 5)
@@ -51,7 +52,7 @@ BEGIN
 		END
 	ELSE IF(@year = 9)
 		BEGIN
-			SELECT * FROM [CTRv2].[dbo].[TesterLogInformationArchive_2019] WHERE BarcodeSerialNumber = @numSerie
+			SELECT * FROM [CTRv2].[dbo].[TesterLogInformationArchive_2019] WITH (NOLOCK) WHERE BarcodeSerialNumber = @numSerie
 		END
 	ELSE
 		BEGIN
